@@ -1,0 +1,392 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+width: 100%;
+height: 100%;
+
+
+}
+#webflix {
+  font-weight: bold;
+  color: #ff8d3f;
+  padding: 1%;
+  padding-left: 4%;
+  width: 30%;
+
+}
+.webflixdiv {
+  opacity: 0.7;
+}
+.sign-in {
+  float: right;
+  margin-top: 3%;
+  margin-right: 7%;
+  border: 0 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  color: #353c3f;
+  font-weight: 500;
+  background-color: #ff8d3f;
+}
+.register {
+  background-color: #ff8d3f;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #353c3f;
+  border: 0 !important;
+}
+.page-content {
+  background-color: #353c3f;
+}
+/*index*/
+.splash-left {
+  width: 100%;
+  height: auto%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+
+}
+.splash-left::before {
+  background-color: #353c3f ;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+
+}
+.splash-left::after {
+  background-image: url('../images/spider-man-2.jpg');
+ background-size: cover;
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.1;
+
+}
+/*register*/
+.splash-left2 {
+  width: 100%;
+  height: auto%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+
+}
+.splash-left2::before {
+  background-color: #353c3f ;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.splash-left2::after {
+  background-image: url('../images/Happy-Gilmore.jpg');
+ background-size: cover;
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.1;
+}
+/*profile*/
+.splash-left3 {
+  width: 100%;
+  height: auto%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+
+}
+.splash-left3::before {
+  background-color: #353c3f ;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.splash-left3::after {
+  background-image: url('../images/Happy-Gilmore.jpg');
+ background-size: cover;
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.1;
+}
+
+/*myHome*/
+  #splash-left4 {
+    width: 100%;
+    height: auto%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+
+  }
+  #splash-left4::before {
+    background-color: #353c3f ;
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  #splash-left4::after {
+
+    background-image: url('../images/The-Jungle-Book.jpg');
+   background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+
+}
+/*Feeds*/
+  .splash-left5 {
+    width: 100%;
+    height: auto%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+
+  }
+  .splash-left5::before {
+    background-color: #353c3f ;
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  .splash-left5::after {
+    background-image: url('../images/The-Jungle-Book.jpg');
+   background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+/*movieHub*/
+  .splash-left6 {
+    width: 100%;
+    height: auto%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+
+  }
+  .splash-left6::before {
+    background-color: #353c3f ;
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  .splash-left6::after {
+    background-image: url('../images/The-Jungle-Book.jpg');
+   background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.splash-msg {
+font-family: 'Lato', sans-serif;
+color: #d5d6d2;
+font-weight: 400;
+font-size: 45px;
+
+}
+.bmlogo {
+  width: 17%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  opacity: 0.5;
+}
+#webflixreg {
+  font-weight: bold;
+  color: #ff8d3f;
+  margin-top: 20%;
+
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+ background-color: white !important;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+
+}
+input[type=password], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+background-color: white !important;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input {
+  color: white;
+}
+label {
+  color: white;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+form {
+  padding-top: 5%;
+  opacity: 0.6;
+
+  padding: 3%;
+
+}
+h3 {
+  background-color: #353c3f;
+  opacity: 0.7;
+  padding: 2%;
+}
+li {
+  display: inline-block;
+}
+.webflixNav {
+  float: right;
+  padding: 2%;
+  font-size: 30px;
+  opacity: 0.6;
+
+}
+.nav-item, .nav-link {
+  color: #ff8d3f;
+}
+#sign-in {
+    float: right;
+    margin-top: 2%;
+    margin-right: 7%;
+    border: 0 !important;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: #353c3f;
+    font-weight: 500;
+    background-color: #ff8d3f;
+  }
+  #register {
+    background-color: #ff8d3f;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #353c3f;
+    border: 0 !important;
+  }
+  #register:hover {
+    transition: 0.7s;
+  }
+  #sign-in:hover {
+    transition: 0.7s;
+  }
+  .register {
+    background-color: #ff8d3f;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #353c3f;
+    border: 0 !important;
+  }
+  .register:hover {
+    transition: 0.7s;
+  }
+  .cancel {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 0 !important;
+  }
+  .page-content {
+    background-color: #353c3f;
+  }
+    #star {
+display: none;
+  }
