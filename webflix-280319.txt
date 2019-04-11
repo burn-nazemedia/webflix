@@ -1,0 +1,14 @@
+Webflix notes 280319
+
+on homepage file index_dev.php the page now displays movie information from the movie database.
+
+On settings.php the user can update their account details such as email, name and password.
+
+On admin.php the admins can add a movie to the movie database table, the crud features for this are within mng_movie.php.
+
+On RSS.php the user can enter custom rss urls to have personalised rss feeds. Once entered the user can change this url at any time and the field will show the current url stored 
+in the database.
+
+*please not that the php includes folow a file structure so will need to follow this pattern to work, the inc folder needs to stay in the root of the file system.
+
+

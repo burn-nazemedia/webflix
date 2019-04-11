@@ -1,0 +1,147 @@
+/* CSS Document */
+
+body {
+	max-height: 100%;
+	min-height: 100%;
+	background-color: #000000!important;
+}
+a {
+	text-decoration: none;
+	color: #3498bd;
+}
+a:hover {
+	text-decoration: none;
+}
+form {
+	text-align: center;
+}
+
+@media (max-width:768px) {
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	background-color: #000;
+}
+.login-box {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #EDEDED;
+	border-radius: 10px;
+	opacity: 0.98;
+	padding: 20px;
+}
+.reg-box {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #EDEDED;
+	border-radius: 10px;
+	opacity: 0.98;
+	padding: 5px;
+}
+.reg-header {
+	text-align: center;
+	color: #fff;
+}
+.yujin-header {
+	border-radius: 10px;
+}
+input[type="submit"] {
+	background-color: #3498bd;
+	border: 1px solid #3498bd;
+	border-radius: 3px;
+	margin: 5px 0px 10px 0px;
+	padding: 5px 10px 5px 10px;
+	color: #2C6C96;
+	text-shadow: #73B6E2 0.5px 0.5px 0px;
+}
+input[type="submit"]:hover {
+	background-color: #3498bd;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+	border: 1px solid #e5e5e5;
+	margin-top: 5px;
+	height: 35px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	width: 70%;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+	border-color: #3498bd;
+}
+#second {
+	display: none;
+}
+.reg-logo {
+	margin: -5px 0px 20px 0px;
+	width: 50%;
+	margin: 0 auto;
+}
+.space-div {
+	min-height: 25em;
+	max-height: 30em;
+}
+}
+
+@media (min-width:769px) {
+
+body {
+	
+	background-color:#000000;
+}
+.login-box {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #EDEDED;
+	border-radius: 10px;
+	opacity: 0.98;
+	padding: 20px;
+}
+.reg-box {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #EDEDED;
+	border-radius: 10px;
+	opacity: 0.98;
+	padding: 20px;
+	top: 100px;
+}
+.reg-header {
+	text-align: center;
+	color: #fff;
+}
+
+input[type="submit"] {
+	background-color: #3498bd;
+	border: 1px solid #3498bd;
+	border-radius: 3px;
+	margin: 5px 0px 10px 0px;
+	padding: 5px 10px 5px 10px;
+	color: #2C6C96;
+	text-shadow: #73B6E2 0.5px 0.5px 0px;
+}
+input[type="submit"]:hover {
+	background-color: #3498bd;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+	border: 1px solid #e5e5e5;
+	margin-top: 5px;
+	height: 35px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	width: 70%;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+	border-color: #3498bd;
+}
+#second {
+	display: none;
+}
+.reg-logo {
+	margin-top: 15px;
+}
+.space-div {
+	height: 20%;
+}
+}
