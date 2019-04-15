@@ -2,6 +2,7 @@
 session_start();
 
 include( "inc/header.php" );
+include ("inc/nav.php");
 
 
 
@@ -23,12 +24,12 @@ if ( $_POST[ 'action' ] == "insert" ) {
             $_POST[ 'review_description' ] );
         $review_date = mysqli_escape_string( $con,
             $_POST[ 'review_date' ] );
-		
+
 
 		$movieId = $_GET['movie_id'];
         //insert query
         $insertSql = "INSERT INTO `review`
-		              (`movie_id`,`review_title`,`review_score`,`review_description`,`review_date`) 
+		              (`movie_id`,`review_title`,`review_score`,`review_description`,`review_date`)
 					  VALUES
 					  ('{$movieId}','{$review_title}','{$review_score}','{$review_description}',NOW())";
 
@@ -44,6 +45,6 @@ if ( $_POST[ 'action' ] == "insert" ) {
 
 }
 
-} 
+}
 
 ?>

@@ -49,8 +49,8 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 					WEBFLIX
 				</span>&nbsp; <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s"> movie database, movie rss feeds & more...</span></h2>
 			<hr/>
-		<div class="row" style="margin-top: 5em;">
-			<div class="col-md-1"></div>
+		<div class="row" style="margin-top: 5em; padding-left: 15%;">
+
 
 
 	<?php
@@ -63,7 +63,8 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 		while ($row=mysqli_fetch_array($result)) {
 
 		?>
-		<div class="col-md-3 text-center homeTile wow fadeIn" data-wow-duration="2s" data-wow-delay="1.8s">
+		<div class="col-md-3 text-center homeTile wow fadeIn"
+		style="margin-bottom: 3em;" data-wow-duration="2s" data-wow-delay="1.8s">
 <a class="homeLink" href="movie.php?id=<?php echo $row['movie_id']; ?>">
 	<img class="listingsthumb img-responsive" src="<?php echo $row['movie_image_main']; ?>" style="width: 70%;
 				height: 10em; border-radius: 25px;"/>
