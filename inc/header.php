@@ -29,25 +29,6 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 	}
 	?>
 	<link rel="stylesheet" href="css/webflix.css">
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-
-	<script src="js/jquery.cookie.js"></script>
-	<script src="js/webflix.js"></script>
-
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-	<script>
-					new WOW().init();
-					</script>
-
-
-
-
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
@@ -62,13 +43,37 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 
 
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="assets/css/register.css">
+	<!--<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>-->
+<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/webflix.js"></script>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<script>
+					new WOW().init();
+					</script>
+
+
+
+
+
+
 
 <script type="text/javascript" src="assets/js/functions.js"></script>
-<!-- <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script> -->
-	<title>Welcome to Webflix</title>
+
+	<title>Welcome to Webflix </title>
 </head>
 
 <body>
+
+
 
 
 	<!--<button type="button" onclick="switch_style('black');return false;" name="theme" value="Black Theme" id="black">Black Theme</button>

@@ -3,6 +3,7 @@ session_start();
 //include database connection
 include( "inc/header.php" );
 
+
 if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 	$result = mysqli_query( $con,
@@ -60,29 +61,55 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 	</div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid splash-left5">
+	<?php include 'inc/nav.php' ?>
 	<div class="row">
 
-		<div>
+		<div class="col-md-6">
+	<h1 class="splash-msg wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-left: 10%;">Movie Database</h1>
+</div>
+<div class="col-md-5 text=center">
+
+							 <form method="post">
+									 <input type="text" class="homeSearch" placeholder="Search..."/>
+							 </form>
+
+</div>
+</div>
+	<hr/>
+	<div class="row" style="margin-left: 4%;">
 
 
 
-			<?php 
+
+
+			<?php
 			//loop through each row from results
 			while ($row=mysqli_fetch_array($result)) {
 			?>
-			<img class="listingsthumb img-responsive" src="<?php echo $row['movie_image_main']; ?>" width="200"/>
-			<a href="movie.php?id=<?php echo $row['movie_id']; ?>">
+			<div class="col-md-3 text-center" >
+				<div style="width: 90%; background-color: #494949; border-radius: 25px; padding: 2%; opacity: 0.7;">
+					<a id="listTile" href="movie.php?id=<?php echo $row['movie_id']; ?>" style="color: white;">
+			<img class="listingsthumb img-responsive" src="<?php echo $row['movie_image_main']; ?>"
+			 		style="width: 80%; height: 10em; border-radius: 25px; margin-top: 4%;"/>
+					<hr/>
 
 
-				<h1 class="listingname">
-					<?php echo $row['movie_name']; ?> </h1>
+
+				<h5 class="listingname">
+				<strong>	<?php echo $row['movie_name']; ?> </strong></h5><hr/>
 				<p>
-					<?php echo $row['movie_description']; ?>
+					<strong><?php echo $row['movie_release_date']; ?></strong>
+				</p>
+				<hr/>
+				<p>
+			<strong>Genre:	<?php echo $row['movie_genre']; ?></strong>
 				</p>
 
 
 			</a>
+		</div>
+		</div>
 			<br/>
 			<hr></hr>
 
@@ -94,7 +121,7 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 
 	</div>
-</div>
+
 
 </body>
 

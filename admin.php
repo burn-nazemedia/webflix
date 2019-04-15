@@ -31,7 +31,7 @@ include( "inc/header.php" );
 
 	<link href="css/style.css" rel="stylesheet">
 
-	<?php 
+	<?php
 
 	include("inc_scriptpackage.inc.php");
 
@@ -55,49 +55,49 @@ include( "inc/header.php" );
 
 <body>
 
-	<?php 
+	<?php
 
-	
+
 
 	include("inc_nav.inc.php");
 
-	
+
 
 	?>
 
-	<div class="container">
-
+	<div class="container-fluid splash-left5">
+<?php include 'inc/nav.php' ?>
 		<div class="row">
-			
-            
-			<div class="col-md-10 col-md-offset-1 adminformparent">
 
-	
+
+			<div class="col-md-4 offset-md-4">
+
+
 
 
 
 
 <img src="images/cartridgefavi.png" class="img-responsive cartridgeicon" width="70" alt=""/>
-<h1 class="checkoutheader">Insert Movie</h1>
-	
+<h3 class="checkoutheader" style="font-size: 40px; color: orange;"><strong>Insert Movie</strong></h3>
+
 	<form method="post" enctype="multipart/form-data" action="mng_movies.php"><br />
 		<input type="hidden" name="action" value="insert"/><br />
-		<h3>Movie Name:</h3><input class="adminfield" type="text" name="movie_name"/>
+		<input class="adminfield" type="text" name="movie_name" placeholder="Movie Name" style="color: black;"/>
 		<br />
-		<h3>Movie Description:</h3><input class="adminfield" type="text" name="movie_description"/>
+		<input class="adminfield" type="text" name="movie_description" placeholder="Movie Description" style="color: black;"/>
 		<br />
-		<h3>Movie Genre:</h3><input class="adminfield" type="text" name="movie_genre"/>
+		<input class="adminfield" type="text" name="movie_genre" placeholder="Movie Genre" style="color: black;"/>
 		<br />
-		<h3>Movie Release Year:</h3><input class="adminfield" type="text" name="movie_release_date"/>
+		<input class="adminfield" type="text" name="movie_release_date" placeholder="Movie Release Year" style="color: black;"/>
 		<br />
-		<h3>Movie Thumbnail:</h3><input type="file" name="thumb" /> 
+		<h3 style="color: orange;"><strong>Movie Thumbnail:</strong></h3><input type="file" name="thumb" style="margin-bottom: 3em;" />
 		<br />
-		<h3>Movie Main Image:</h3><input type="file" name="main" />
+		<h3 style="color: orange;"><strong>Movie Main Image:</strong></h3><input type="file" name="main" style="margin-bottom: 3em;"/>
 		<br />
-		<input type="submit" class="adminsubmit" value="Insert Movie" />
+		<input type="submit" class="register" value="Insert Movie" />
 	</form>
 
-				
+
 
 
 
@@ -116,13 +116,13 @@ include( "inc/header.php" );
 
 	<hr>
 
-	<?php 
+	<?php
 
-	
+
 
 	include("footer.php");
 
-	
+
 
 	?>
 
