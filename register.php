@@ -25,6 +25,9 @@ include('inc/form_handlers/login_handler.php');
 a {
 	color: white;
 }
+hr {
+	border-top: 1px solid grey;
+}
 	</style>
 
 </head>
@@ -50,14 +53,15 @@ a {
 	<div class="container-fluid splash-left5">
 		<div class="row" style="">
 
-				<div class="col-md-4 col-md-offset-4 text-center">
-					<span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s" id="webflix2">
-						WEBFLIX
-					</span>
-					<h2 class="regis-header" style="border-radius: 25px; margin-bottom: 2em;"><strong>Login or sign up below</strong></h2>
-				</div>
-				<div class="col-md-4 col-md-offset-4 login-box"
-				style="background-color: #494949; border: 0 !important; opacity: 0.7;">
+
+				<div class="col-md-4 col-md-offset-4 text-center login-box"
+				style="background-color: #494949; border: 0 !important; opacity: 0.8; margin-top: 7%; padding-top: 2%;">
+				<span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s" id="webflix2">
+					WEBFLIX
+				</span>
+				<hr/>
+					<h2 class="regis-header" style="border-radius: 25px;"><strong>Login or sign up below</strong></h2>
+					<hr/>
 					<div id="first">
 						<form action="register.php" method="POST">
 							<input type="email" name="log_email" placeholder="Email address" value="<?php
@@ -67,7 +71,7 @@ a {
 						?>" required>
 							<br>
 							<input type="password" name="log_password" placeholder="Password">
-							<br>
+							<hr>
 							<?php if(in_array("Email or password is incorrect<br>", $error_array)) echo "Email or password is incorrect<br>"; ?>
 							<input  style="background-color: #ff8d3f; border: 0; color: #494949; width: 30%;" class="reg-btn btn-primary" type="submit" name="login_button" value="Login">
 							<br>
@@ -121,6 +125,7 @@ a {
 
 							<label><input class="confirm" type="checkbox" name="confirm-check" label="I agree to the terms and conditions" required>&nbsp;I agree to the <a target="_blank" href="terms.php">terms and conditions</a></label>
 							<br/>
+							<hr/>
 
 							<input style="background-color: #ff8d3f; border: 0; color: #494949; width: 30%;" class="btn-primary" type="submit" name="register_button" value="Register"><br/>
 

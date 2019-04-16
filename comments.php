@@ -13,7 +13,7 @@ include("inc/header.php");
 
 		//FUNCTION TO PARSE RSS FEED --------------------------------------------------------------
 		function getFeed (rsscontent) {
-			
+
 			var xml = rsscontent;
 			 xmlDoc = $.parseXML( xml ),
 			 $xml = $( xmlDoc ),
@@ -32,7 +32,7 @@ include("inc/header.php");
 					htmlString = "<div class='rssitem'>";
 			 		$(this).children().each(function() {
 
-						
+
 			 			if($(this).prop("tagName")=="title") {
 			 				htmlString+= "<h1>" + $(this).text() + "</h1>";
 			 			}
@@ -43,7 +43,7 @@ include("inc/header.php");
 			 				htmlString+= "<a href='" + $(this).text() + "'>Link</a>";
 			 			}
 			 		});
-			 		
+
 			 		htmlString += "</div>";
 
 			 		$("main").append(htmlString);
@@ -55,7 +55,7 @@ include("inc/header.php");
 		//DOCUMENT READY EVENT HANDLER =========================================================
 		$(document).ready(function() {
 			//RSS fEED RETRIEVER --------------------------------------------------------------
-			
+
 			$.ajax({
 				beforeSend: function() {
 					$("#loading").show();
@@ -90,7 +90,7 @@ include("inc/header.php");
 			//COMMENTS CONTAINER HEIGHT ANIMATION -----------------------------------------
 			$( "#commentslink" ).click(function() {
 
-				if(commentsUpFlag) { 
+				if(commentsUpFlag) {
 
 				  	$("#commentscontainer").animate({
 				    	bottom: "-400"
@@ -117,7 +117,7 @@ include("inc/header.php");
 			});
 
 			//UPDATE COMMENTS -------------------------------------------------------------
-			$(document).on("click", '.updatecom', function(event) { 
+			$(document).on("click", '.updatecom', function(event) {
 				var commentId = $(this).attr('comid');
 				$('#commentbtn').attr('mode','update');
 				$('#commentbtn').attr('commentid',commentId);
@@ -137,7 +137,7 @@ include("inc/header.php");
 
 			//INSERT / UPDATE BUTTON CLICK =================================================
 
-			$(document).on("click", '#commentbtn', function(event) { 
+			$(document).on("click", '#commentbtn', function(event) {
 
 
 			var ajaxString = "";
@@ -151,11 +151,11 @@ include("inc/header.php");
 
 			//INSERT COMMENT - SEND --------------------------------------------------------
 
-			
+
 				if($(this).attr('mode')=='insert') {
 
 					ajaxString = "action=insert&user_id=" + userId + "&rss_id=" + rssId + "&comment_content=" + commentContent;
-					
+
 				}
 
 
@@ -164,7 +164,7 @@ include("inc/header.php");
 				if($(this).attr('mode')=='update') {
 
 					ajaxString = "action=update&comment_id=" + $(this).attr('commentid') + "&comment_content=" + commentContent;
-					
+
 				}
 
 
@@ -226,7 +226,7 @@ include("inc/header.php");
 
 
 			//DELETE COMMENT ---------------------------------------------------------------
-			$(document).on("click", '.deletecom', function(event) { 
+			$(document).on("click", '.deletecom', function(event) {
 
 				$.ajax({
 					beforeSend: function() {
@@ -282,7 +282,7 @@ include("inc/header.php");
     		});
 
 		});
-			
+
 			//COMMENT RETRIEVAL FUNCTION ---------------------------------------------------
 			function selectComments() {
 

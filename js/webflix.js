@@ -15,10 +15,42 @@ $(document).ready(function() {
 });
 $(document).ready(function(){
   $("#hide").click(function(){
-    $("#feed").hide();
+    $("#profimg").hide();
   });
   $("#show").click(function(){
-    $("#feed").show();
+    $("#profimg").show();
+  });
+});
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#acdets").hide(2000);
+  });
+  $("#show1").click(function(){
+    $("#acdets").show();
+  });
+});
+$(document).ready(function(){
+  $("#hide2").click(function(){
+    $("#acdets2").hide();
+  });
+  $("#show2 ").click(function(){
+    $("#acdets2").show();
+  });
+});
+$(document).ready(function(){
+  $("#hide3").click(function(){
+    $("#close").hide();
+  });
+  $("#show3 ").click(function(){
+    $("#close").show();
+  });
+});
+$(document).ready(function(){
+  $("#hide4").click(function(){
+    $("#themes").hide();
+  });
+  $("#show4").click(function(){
+    $("#themes").show();
   });
 });
 
