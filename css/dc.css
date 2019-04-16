@@ -9,11 +9,141 @@ height: 100%;
 
 
 }
+h2, h1, h3, h4, h5 {
+  color: blue;
+}
+.mtitle {
+  font-weight: bold;
+}
+.homeTile {
+  background-color: black;
+  padding: 2%;
+  opacity: 0.7;
+}
+.homeLink {
+  opacity: 0.7;
+  color: white;
+}
+.homeLink:hover {
+  opacity: 1;
+  color: yellow;
+  transition: 0.7s;
+  text-decoration: none;
+}
+#webflix1 {
+  color: blue;
+}
+#welcome {
+  color: white;
+  margin-left: 10%;
+}
+#listTile {
+  opacity: 0.6;
+}
+#listTile:hover {
+  opacity: 1;
+  transition: 0.7s;
+  text-decoration: none;
+  color: orange !important;
+}
+.dblist {
+  background-color: black !important;
+}
+.homeSearch {
+    width: 40% !important;
+    opacity: 0.5;
+    margin-top: 0px;
+    float: right !important;
+    background: rgba(0, 0, 0, 0.1);
+    color: red;
+    padding: 8px;
+    border: 0px;
+    height: 2em;
+    font-size: 2.1em;
+    font-weight: bold;
+    transition: ease-in 0.2s;
+}
+.homeSearch:focus {
+    width: 70% !important;
+    opacity: 1;
+    height: 2.5em;
+    border: none !important;
+    outline: none !important;
+    transition: ease-in 0.4s;
+    color: #03A9F4;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 4px -6px #000;
+}
+#nav {
+
+  opacity: 1;
+}
+#listTile {
+  opacity: 0.6;
+}
+#listTile:hover {
+  opacity: 1;
+  transition: 0.7s;
+  text-decoration: none;
+  color: yellow !important;
+}
+#profimg {
+  display: none;
+  background-color: #494949;
+  border-radius: 25px;
+  margin-bottom: 2em;
+  padding: 2%;
+  opacity: 0.7;
+}
+#acdets {
+  display: none;
+  background-color: #494949;
+  border-radius: 25px;
+  margin-bottom: 2em;
+    padding: 2%;
+    opacity: 0.7;
+}
+#acdets:hover {
+  opacity: 1;
+  transition: 0.7s;
+}
+#acdets2 {
+  display: none;
+  background-color: #494949;
+  border-radius: 25px;
+  margin-bottom: 2em;
+  padding: 2%;
+  opacity: 0.7;
+}
+#acdets2:hover {
+  opacity: 1;
+  transition: 0.7s;
+}
+#acdets3 {
+  display: none;
+}
+#close {
+  display: none;
+  background-color: #494949;
+  border-radius: 25px;
+  margin-bottom: 2em;
+  padding: 2%;
+  opacity: 0.7;
+}
+#close:hover {
+  opacity: 1;
+  transition: 0.7s;
+}
+.set-head {
+  color: blue;
+  background-color: black;
+}
+
 #webflix {
   font-weight: bold;
   color: blue;
   background-color: ;
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Bangers', cursive;
   padding: 1%;
   padding-left: 4%;
   width: 100%;
@@ -171,7 +301,7 @@ opacity: 0.1;
     z-index: -2;
   }
   #splash-left4::after {
-    
+
     background-image: url('../images/batman.jpg');
    background-size: cover;
   content: "";
@@ -182,8 +312,8 @@ opacity: 0.1;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.1;
-  
+  opacity: 0.3;
+
 }
 /*Feeds*/
   .splash-left5 {
@@ -217,7 +347,7 @@ opacity: 0.1;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 /*movieHub*/
   .splash-left6 {
@@ -255,10 +385,22 @@ opacity: 0.1;
 }
 
 .splash-msg {
-font-family: 'Lato', sans-serif;
-color: #d5d6d2;
-font-weight: 400;
+
+font-family: 'Bangers', cursive;
+color: blue;
+
+font-weight: bold;
 font-size: 45px;
+padding: 1%;
+
+
+}
+h1, h2, h3, h4, h5 {
+font-family: 'Bangers', cursive;
+color: blue;
+
+font-weight: bold;
+
 
 }
 .bmlogo {
@@ -388,7 +530,4 @@ li {
   }
   .page-content {
     background-color: #353c3f;
-  }
-  #star {
-font-size: 30px;
   }

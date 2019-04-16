@@ -37,19 +37,15 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 }
 ?>
 
-
-
-
-
 	<body class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
   <div class="container-fluid" id="splash-left4">
 		<?php include 'inc/nav.php' ?>
-			<h2 id="welcome" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s">
+			<h2 id="welcome" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-top: 2em;">
 				Welcome to <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s" id="webflix1">
-					WEBFLIX
+				<strong>	WEBFLIX </strong>
 				</span>&nbsp; <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s"> movie database, movie rss feeds & more...</span></h2>
 			<hr/>
-		<div class="row" style="margin-top: 5em; padding-left: 15%;">
+		<div class="row" style="margin-top: 5em; padding-left: 5%; padding-right: 5%;">
 
 
 
@@ -63,13 +59,16 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 		while ($row=mysqli_fetch_array($result)) {
 
 		?>
-		<div class="col-md-3 text-center homeTile wow fadeIn"
-		style="margin-bottom: 3em;" data-wow-duration="2s" data-wow-delay="1.8s">
+
+		<div class="col-md-4 text-center wow fadeIn"
+		style="margin-bottom: 3em; margin-right: 0em;" data-wow-duration="2s" data-wow-delay="1.8s">
+		<div class="homeTile text-center" style="border-radius: 25px; ">
+
 <a class="homeLink" href="movie.php?id=<?php echo $row['movie_id']; ?>">
 	<img class="listingsthumb img-responsive" src="<?php echo $row['movie_image_main']; ?>" style="width: 70%;
 				height: 10em; border-radius: 25px;"/>
 	<hr/>
-	<h2>
+	<h2 class="mtitle">
 		<?php echo $row['movie_name']; ?><br/>
 	</h2>
 <hr/>
@@ -82,6 +81,8 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 	</p>
 </a>
 </div>
+</div>
+
 
 <?php
 }

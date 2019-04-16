@@ -28,11 +28,20 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 		echo '<link rel="stylesheet" type="text/css" title="red" href="assets/css/red.css">';
 	}
 	?>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+<!--<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>-->
+	<script src="js/jquery.cookie.js"></script>
+
 	<link rel="stylesheet" href="css/webflix.css">
+
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -40,16 +49,11 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 
 
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-
+<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="assets/css/register.css">
-	<!--<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>-->
-<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
-	<script src="js/jquery.cookie.js"></script>
+
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="js/webflix.js"></script>
 

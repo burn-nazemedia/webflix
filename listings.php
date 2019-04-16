@@ -61,14 +61,14 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 	</div>
 </div>
-<div class="container-fluid splash-left5">
+<div class="container-fluid splash-left5 wow fadeIn" >
 	<?php include 'inc/nav.php' ?>
 	<div class="row">
 
 		<div class="col-md-6">
 	<h1 class="splash-msg wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-left: 10%;">Movie Database</h1>
 </div>
-<div class="col-md-5 text=center">
+<div class="col-md-6 text=center">
 
 							 <form method="post">
 									 <input type="text" class="homeSearch" placeholder="Search..."/>
@@ -88,7 +88,7 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 			while ($row=mysqli_fetch_array($result)) {
 			?>
 			<div class="col-md-3 text-center" >
-				<div style="width: 90%; background-color: #494949; border-radius: 25px; padding: 2%; opacity: 0.7;">
+				<div class="dblist" style="width: 90%; background-color: #494949; border-radius: 25px; padding: 2%; opacity: 0.7;">
 					<a id="listTile" href="movie.php?id=<?php echo $row['movie_id']; ?>" style="color: white;">
 			<img class="listingsthumb img-responsive" src="<?php echo $row['movie_image_main']; ?>"
 			 		style="width: 80%; height: 10em; border-radius: 25px; margin-top: 4%;"/>
@@ -96,8 +96,8 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 
 
-				<h5 class="listingname">
-				<strong>	<?php echo $row['movie_name']; ?> </strong></h5><hr/>
+				<h4 class="listingname">
+				<strong>	<?php echo $row['movie_name']; ?> </strong></h4><hr/>
 				<p>
 					<strong><?php echo $row['movie_release_date']; ?></strong>
 				</p>
