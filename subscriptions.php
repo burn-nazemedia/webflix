@@ -11,10 +11,10 @@ include("inc/header.php");
 			userid = getUrlParameter("userid");
 
 			selectSubscriptions();
-			
-			$(document).on("click", '.sublink', function(event) { 
+
+			$(document).on("click", '.sublink', function(event) {
     			//alert($(this).attr("rssid"));
-				
+
     			rssid = $(this).attr("rssid");
     			action = $(this).attr("action");
 
@@ -28,7 +28,8 @@ include("inc/header.php");
 					type: 'GET',
 					dataType: "jsonp",
 					jsonp: "callback",
-					url: "https://webflix.afotheringham.co.uk/mng_subscription.php?action=" + action + "&user_id=" + userid + "&rss_id=" + rssid,
+					url: "//localhost/webflix-1/mng_subscription.php?action=" + action + "&user_id=" + userid + "&rss_id=" + rssid,
+
 					success: function(data) {
 
 						responseString="";
@@ -68,7 +69,7 @@ include("inc/header.php");
 				return false;
 			});
 
-			$(document).on("click", '.rsslink', function(event) { 
+			$(document).on("click", '.rsslink', function(event) {
     			location.href="comments.php?userid=" + userid + "&rssid=" + $(this).attr("rssid");
     			return false;
     		});
@@ -89,7 +90,8 @@ include("inc/header.php");
 				type: 'GET',
 				dataType: "jsonp",
 				jsonp: "callback",
-				url: "https://webflix.afotheringham.co.uk/mng_subscription.php?action=select&user_id=" + userid,
+				url: "//localhost/webflix-1/mng_subscription.php?action=select&user_id=" + userid,
+
 				success: function(data) {
 
 					responseString="";
@@ -117,14 +119,14 @@ include("inc/header.php");
 
 		</script>
 
-	
+
 
 		<header>
 				RSS Feed App - Subscriptions
 		</header>
 
 		<main>
-			
+
 			<?php
 if ( $_SESSION[ 'user_id' ] == '4' ) {
 	echo '<a class="adminlink" href="admin.php"><h3>userid</h3></a>';
@@ -140,7 +142,7 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 
 		</main>
 
-		
+
 
 		<img src="images/loading.gif" id="loading" />
 

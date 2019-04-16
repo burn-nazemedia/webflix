@@ -1,23 +1,66 @@
-<?php 
+<?php
 include("inc/header.php");
 include("inc/form_handlers/settings_handler.php");
 ?>
 
+<style>
+input {
+	color: black;
+}
+i {
+	float: right;
+}
+.cross {
+	color: red;
+	font-size: 20px;
 
-<div class="main-wrap col-md-12">
-<div class="main_column column settings-div col-md-6 col-md-offset-3">
+}
+.fa-plus-circle {
+	color: white;
+}
+</style>
+<div class="container-fluid splash-left5 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+	<?php include 'inc/nav.php' ?>
+	<h1 class="splash-msg wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s" style="margin-left: 10%; margin-top: 3%; margin-bottom: 3%;">Account Settings</h1>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+	<!--Close account form-->
+	<h2 class="set-head" style="border-radius: 25px; padding: 2%; margin-bottom: 4%; text-align: center; opacity: 0.7;">
+		<strong>Special Edition Themes</strong><a href="#" id="show4"><i class="fas fa-plus-circle"></i></a></h2>
+		<div id="themes" style="display: none;" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+				<h1>Boom</h1>
+				<ul id="nav">
+					<li><a href="#" rel="css/marvel.css">MVL</a></li>
+					<li><a href="#" rel="css/dc.css">DC</a></li>
+					<li><a href="#" rel="css/kids.css">Kids</a></li>
+					<li><a href="#" rel="css/webflix.css">WEBFLIX</a></li>
+				</ul>
+				 <a href="#" id="hide4" title="Close"><i class="fas fa-times-circle cross"></i></a>
+			</div>
+	</div>
+</div>
+	<div class="row">
 
-	<h1 style="color:#1f1f1f">Account Settings</h1>
+		<div class="col-md-4 "></div>
+<div class="col-md-4 setting-field">
+
+
 	<br>
-	<h3>Change Profile Picture</h3>
+
+		<h2 class="set-head" style=" border-radius: 25px;
+		 	padding: 2%; margin-bottom: 5%; text-align: center; opacity: 0.7;" class="wow fadeIn"  data-wow-duration="1s" data-wow-delay="1.2s">
+			<strong>Change Profile Image</strong><a href="#" id="show"><i class="fas fa-plus-circle"></i></a></h2>
+			<div id="profimg" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+
 	<?php
 	echo "<img width='200px' class='img-responsive' src='" . $user['profile_pic'] ."' id='small_profile_pics'>";//display current profile picture
 	?>
 	<br>
-	
 
-	
-	
+
+
+
 	<br>
        <!--upload new picture to folder and change url in users table-->
 	<?php
@@ -52,7 +95,7 @@ include("inc/form_handlers/settings_handler.php");
 		}
 
 	}
-		
+
 
 		//Insert image into database
 		$insert_pic_query = mysqli_query($con, "UPDATE users SET profile_pic='$imageName' WHERE username='$userLoggedIn'");
@@ -76,97 +119,108 @@ include("inc/form_handlers/settings_handler.php");
 	$last_name = $row['last_name'];
 	$email = $row['email'];
 	$profilePic = $row['profile_pic']
-	
+
 	?>
-	
+
 	<!--Form to submit profile pic-->
-	<form action="settings.php" method="POST" encType="multipart/form-data">
+	<form action="settings.php" method="POST" enctype="multipart/form-data">
 
-			
-			<input type="file" name="fileToUpload" class="fileToUpload" id="fileToUpload">
-			
-			<input type="submit" name="post" id="post_button" value="Change Picture">
+
+			<input style="background-color: #494949; color: white; border: 0;" type="file" name="fileToUpload" class="fileToUpload" id="fileToUpload">
+
+			<input style="background-color: #14f702; color: white; border: 0;" type="submit" name="post" id="post_button" value="Change Picture">
 			<hr>
-
+ <a href="#" id="hide" title="Close"><i class="fas fa-times-circle cross"></i></a>
 
 
 		</form>
-<!--Form to change account details-->
-<h3>Change Account Details</h3>
-	<form action="settings.php" method="POST">
-		
-		
-		<div class="row">
-			<div class="col-md-2"><p class="setting-place">First Name:</p></div>
-			<div class="col-md-6 setting-field"><input type="text" name="first_name" value="<?php echo $first_name; ?>"></div>
-		
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-2"><p class="setting-place">Last Name:</p></div>
-			<div class="col-md-6 setting-field"><input type="text" name="last_name" value="<?php echo $last_name; ?>"></div>
-		
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-2"><p class="setting-place">Email:</p></div>
-			<div class="col-md-6 setting-field"><input type="text" name="email" value="<?php echo $email; ?>"></div>
-		
-		</div>
-		<br>
-		
-	
-		<?php echo $message; ?>
-		
-		<!--change password form-->
-<div class="col-md-2 col-md-offset-4">
-		<input type="submit" name="update_details" id="save_details" value="Update Details"><br>
-	</form>
+	</div>
+	</div>
 </div>
-	<br>
-	<br>
-	<h4>Change Password</h4>
-	<form action="settings.php" method="POST">
-		
+<!--Form to change account details-->
+
+
+
+
 		<div class="row">
-			<div class="col-md-2"><p class="setting-place">Old Password:</p></div>
-			<div class="col-md-6 setting-field"><input type="password" name="old_password"></div>
-		
+			<div class="col-md-4"></div>
+			<div class="col-md-4 setting-field" style="color: black;">
+				<h2 class="set-head" style=" border-radius: 25px; padding: 2%;
+				     margin-bottom: 3%; text-align: center; opacity: 0.7;" class="wow fadeIn"  data-wow-duration="1s" data-wow-delay="1.5 s">
+					<strong>Change Account Details</strong><a href="#" id="show1"><i class="fas fa-plus-circle"></i></a></h2>
+				</div>
+			</div>
+
+					<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4 setting-field wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" id="acdets" style="color: black;">
+<form action="settings.php" method="POST">
+								<span class="setform">First Name </span> <br/><br/><input  type="text" name="first_name" value="<?php echo $first_name; ?>">
+							<br/>	<br/><span class="setform">Last Name </span><br/><br/>
+								<input type="text" name="last_name" value="<?php echo $last_name; ?>">
+								<br/>	<br/><span class="setform">Email </span><br/><br/>
+								<input type="text" name="email" value="<?php echo $email; ?>">
+       <br/>
+			<?php echo $message; ?>
+<br/>
+			<input style="background-color: #14f702; color: white; border: 0;" type="submit" name="update_details" id="save_details" value="Update Details">
+     <hr/><a href="#" id="hide1"><i class="fas fa-times-circle cross"></i></a>
+		 </form>
 		</div>
-		<br>
+	</div>
+
+<br/>
+
+
+
 		<div class="row">
-			<div class="col-md-2"><p class="setting-place">New Password:</p></div>
-			<div class="col-md-6 setting-field"><input type="password" name="new_password_1"></div>
-		
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<h2 class="set-head" style=" border-radius: 25px; padding: 2%;
+				 margin-bottom: 4%; text-align: center; opacity: 0.8;">
+					<strong>Change Password</strong><a href="#" id="show2"><i class="fas fa-plus-circle"></i></a></h2>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4" id="acdets2">
+		<form action="settings.php" method="POST">
+			<span class="setform">	Old Password</span> <br/> <br/><input type="password" name="old_password">
+		<br/>	<br/><span class="setform">	New Password</span> <br/> <br/>
+			<input type="password" name="new_password_1"><br/><br/>
+			<span class="setform">Confirm	New Password</span> <br/> <br/><input type="password" name="new_password_2">
+			<?php echo $password_message; ?>
+<br/><br/>
+			<input style="background-color: #14f702; color: white; border: 0;" type="submit" name="update_password" id="save_details" value="Update Password"><br>
+<br/><a href="#" id="hide2"><i class="fas fa-times-circle cross"></i></a>
 		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-2"><p class="setting-place">Confirm New Password:</p></div>
-			<div class="col-md-6 setting-field"><input type="password" name="new_password_2"></div>
-		
+
 		</div>
-		
-		
-		<?php echo $password_message; ?>
-		<div class="col-md-2 col-md-offset-4">
-		<input type="submit" name="update_password" id="save_details" value="Update Password"><br>
-	</form>
-		</div>
-	<br>
-	<br>
-	
-	<!--Close account form-->
-	<h4>Close Account</h4>
-	<form action="settings.php" method="POST">
-		<p>Click the button to close your WebFlix account. Your account will be deactivated but you can log back into your account anytime to re-activate your account.</p>
-		<div class="col-md-2 col-md-offset-4">
-		<input type="submit" name="close_account" id="close_account" value="Close Account">
-		</div>
+
+
+
+
+
+
 	</form>
 
-	</div>
-	<br> 
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+	<!--Close account form-->
+	<h2 class="set-head" style="border-radius: 25px; padding: 2%; margin-bottom: 4%; text-align: center; opacity: 0.7;">
+		<strong>Close Your Account</strong><a href="#" id="show3"><i class="fas fa-plus-circle"></i></a></h2>
+		<div id="close" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+	<form action="settings.php" method="POST">
+		<p style="color: white;">Click the button to close your <span style="color: #ff8d3f;"><strong>WEBFLIX</strong></span> account. Your account will be deactivated but you can log back into your account anytime to re-activate your account.</p>
+
+		<input style="background-color: red; color: white; border: 0;" type="submit" name="close_account" id="close_account" value="Close Account">
+		<br/><a href="#" id="hide3"><i class="fas fa-times-circle cross"></i></a>
+
+	</form>
+</div>
+</div>
+</div>
+	<br>
 <br>
 </div>
-<br> 
-<br>

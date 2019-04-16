@@ -16,6 +16,7 @@ form {
 	text-align: center;
 }
 
+
 @media (max-width:768px) {
 
 body {
@@ -26,15 +27,14 @@ body {
 }
 .login-box {
 	position: relative;
-	background-color: #fff;
-	border: 1px solid #EDEDED;
-	border-radius: 10px;
+	background-color: #494949;
+	border-radius: 25px;
 	opacity: 0.98;
 	padding: 20px;
 }
 .reg-box {
 	position: relative;
-	background-color: #fff;
+	background-color: #494949 !important;
 	border: 1px solid #EDEDED;
 	border-radius: 10px;
 	opacity: 0.98;
@@ -49,7 +49,7 @@ body {
 }
 input[type="submit"] {
 	background-color: #3498bd;
-	border: 1px solid #3498bd;
+	
 	border-radius: 3px;
 	margin: 5px 0px 10px 0px;
 	padding: 5px 10px 5px 10px;
@@ -87,7 +87,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
 @media (min-width:769px) {
 
 body {
-	
+
 	background-color:#000000;
 }
 .login-box {

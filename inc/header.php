@@ -28,39 +28,61 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 		echo '<link rel="stylesheet" type="text/css" title="red" href="assets/css/red.css">';
 	}
 	?>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+<!--<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>-->
+	<script src="js/jquery.cookie.js"></script>
+
+	<link rel="stylesheet" href="css/webflix.css">
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="assets/css/register.css">
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/webflix.js"></script>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<script>
+					new WOW().init();
+					</script>
+
+
+
+
+
+
 
 <script type="text/javascript" src="assets/js/functions.js"></script>
-<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
-	<title>Welcome to Webflix</title>
+
+	<title>Welcome to Webflix </title>
 </head>
 
 <body>
 
-	<a href="inc/handlers/logout.php">
-		<p>Log Out</p>
-	</a>
-
-	<ul>
-		<li><a href="index.php">Home</a>
-		</li>
-		<li><a href="listings.php">Movies</a>
-		</li>
-		<li><a href="settings.php">Settings</a>
-		</li>
-		<li><a href="themes.php">Themes</a>
-		</li>
-		<li><a href="admin_rss.php">Rss Admin</a>
-		</li>
-		<li><a href="rss_listings.php">Rss Feeds</a>
-		</li>
-		<li><a href="subscriptions.php">Subscribe!!</a>
-		</li>
-		<li><a href="<?php echo $userLoggedIn; ?>">Profile</a>
-		</li>
 
 
-	</ul>
+
 	<!--<button type="button" onclick="switch_style('black');return false;" name="theme" value="Black Theme" id="black">Black Theme</button>
 <button type="button" onclick="switch_style('red');return false;" name="theme" value="red Theme" id="red">Red Theme</button>-->
 
 	<script type="text/javascript" src="assets/js/themes.js"></script>
+</body>
+</html>

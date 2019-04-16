@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include("inc/header.php");
@@ -66,7 +67,7 @@ include("inc/header.php");
 				type: 'GET',
 				dataType: "jsonp",
 				jsonp: "callback",
-				url: "http://ria.detritusdesign.co.uk/mng_feed.php?rssid=" + rssId,
+				url: "https://webflix.afotheringham.co.uk/mng_feed.php?rssid=" + rssId,
 				success: function(data) {
 
 					responseString="";
@@ -178,7 +179,7 @@ include("inc/header.php");
 					type: 'GET',
 					dataType: "jsonp",
 					jsonp: "callback",
-					url: "http://ria.detritusdesign.co.uk/mng_comment.php?" + ajaxString,
+					url: "https://webflix.afotheringham.co.uk/mng_comment.php?" + ajaxString,
 					success: function(data) {
 
 						responseString="";
@@ -238,7 +239,7 @@ include("inc/header.php");
 					type: 'GET',
 					dataType: "jsonp",
 					jsonp: "callback",
-					url: "http://ria.detritusdesign.co.uk/mng_comment.php?action=delete&comment_id=" + $(this).attr('comid'),
+					url: "https://webflix.afotheringham.co.uk/mng_comment.php?action=delete&comment_id=" + $(this).attr('comid'),
 					success: function(data) {
 
 						responseString="";
@@ -298,7 +299,7 @@ include("inc/header.php");
 				type: 'GET',
 				dataType: "jsonp",
 				jsonp: "callback",
-				url: "http://ria.detritusdesign.co.uk/mng_comment.php?action=select&user_id=" + userId + "&rss_id=" + rssId,
+				url: "https://webflix.afotheringham.co.uk/mng_comment.php?action=select&user_id=" + userId + "&rss_id=" + rssId,
 				success: function(data) {
 
 					responseString="";
@@ -370,3 +371,4 @@ include("inc/header.php");
 <body>
 </body>
 </html>
+
