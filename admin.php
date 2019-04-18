@@ -1,10 +1,10 @@
 
 <?php
-//session_start();
+session_start();
 
-//if ($_SESSION['user_level']!='admin') {
-	//header('location: index.php');
-//}
+if ($_SESSION['user_level']!='admin') {
+	header('location: index.php');
+}
 
 include( "inc/header.php" );
 ?>

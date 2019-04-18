@@ -20,22 +20,11 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 <head>
 	<meta charset="utf-8">
 	<!--theme choice is taken from session variable-->
-	<?php
-	if ( $_SESSION[ 'user_theme' ] == 'black' ) {
-		echo '<link rel="stylesheet" type="text/css" title="black" href="assets/css/black.css">';
-	} elseif ( $_SESSION[ 'user_theme' ] == 'red' ) {
 
-		echo '<link rel="stylesheet" type="text/css" title="red" href="assets/css/red.css">';
-	}
-	?>
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-<!--<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>-->
-	<script src="js/jquery.cookie.js"></script>
+
 
 	<link rel="stylesheet" href="css/webflix.css">
+
 
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -47,15 +36,18 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="assets/css/register.css">
 
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="js/webflix.js"></script>
+	<link rel="stylesheet" href="assets/css/register.css">
+	<!--<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>-->
+<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+
 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 
@@ -63,7 +55,9 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 	<script>
 					new WOW().init();
 					</script>
-
+					<script src="js/jquery.cookie.js"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+					<script src="js/webflix.js"></script>
 
 
 

@@ -121,11 +121,8 @@ include("inc/header.php");
 
 
 
-		<header>
-				RSS Feed App - Subscriptions
-		</header>
 
-		<main>
+		<main style="background-color: black;">
 
 			<?php
 if ( $_SESSION[ 'user_id' ] == '4' ) {
@@ -136,7 +133,7 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 			<div id="messages">
 
 			</div>
-			<div id="subcontent">
+			<div class="col-md-4" id="subcontent">
 
 			</div>
 

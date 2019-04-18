@@ -61,12 +61,12 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 	</div>
 </div>
-<div class="container-fluid splash-left5 wow fadeIn" >
+<div class="container-fluid splash-left4  wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">
 	<?php include 'inc/nav.php' ?>
 	<div class="row">
 
 		<div class="col-md-6">
-	<h1 class="splash-msg wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-left: 10%;">Movie Database</h1>
+	<h1 class="splash-msg" style="margin-left: 10%;">Movie Database</h1>
 </div>
 <div class="col-md-6 text=center">
 
@@ -91,7 +91,7 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 				<div class="dblist" style="width: 90%; background-color: #494949; border-radius: 25px; padding: 2%; opacity: 0.7;">
 					<a id="listTile" href="movie.php?id=<?php echo $row['movie_id']; ?>" style="color: white;">
 			<img class="listingsthumb img-responsive" src="<?php echo $row['movie_image_main']; ?>"
-			 		style="width: 80%; height: 10em; border-radius: 25px; margin-top: 4%;"/>
+			 		style="width: 80%; height: 13em; border-radius: 25px; margin-top: 4%;"/>
 					<hr/>
 
 

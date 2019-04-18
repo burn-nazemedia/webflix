@@ -3,7 +3,32 @@
 session_start();
 include("inc/header.php");
 ?>
-
+<style>
+h1 {
+	font-size: 25px;
+	color: #494949;
+}
+a {
+	color: white;
+}
+#commentbtn {
+	color: white;
+	background-color: black;
+	border: 0 !important;
+	padding: 1%;
+	border-radius: 25px;
+}
+#webflix {
+	font-size: 40px;
+}
+#clearbtn {
+	color: white;
+	background-color: red;
+	border: 0 !important;
+	padding: 1%;
+	border-radius: 25px;
+}
+</style>
 		<script type="text/javascript">
 
 		var commentsUpFlag = false;
@@ -14,7 +39,7 @@ include("inc/header.php");
 
 		//FUNCTION TO PARSE RSS FEED --------------------------------------------------------------
 		function getFeed (rsscontent) {
-			
+
 			var xml = rsscontent;
 			 xmlDoc = $.parseXML( xml ),
 			 $xml = $( xmlDoc ),
@@ -33,7 +58,7 @@ include("inc/header.php");
 					htmlString = "<div class='rssitem'>";
 			 		$(this).children().each(function() {
 
-						
+
 			 			if($(this).prop("tagName")=="title") {
 			 				htmlString+= "<h1>" + $(this).text() + "</h1>";
 			 			}
@@ -44,7 +69,7 @@ include("inc/header.php");
 			 				htmlString+= "<a href='" + $(this).text() + "'>Link</a>";
 			 			}
 			 		});
-			 		
+
 			 		htmlString += "</div>";
 
 			 		$("main").append(htmlString);
@@ -56,7 +81,7 @@ include("inc/header.php");
 		//DOCUMENT READY EVENT HANDLER =========================================================
 		$(document).ready(function() {
 			//RSS fEED RETRIEVER --------------------------------------------------------------
-			
+
 			$.ajax({
 				beforeSend: function() {
 					$("#loading").show();
@@ -67,7 +92,7 @@ include("inc/header.php");
 				type: 'GET',
 				dataType: "jsonp",
 				jsonp: "callback",
-				url: "https://webflix.afotheringham.co.uk/mng_feed.php?rssid=" + rssId,
+				url: "//localhost/webflix-1/mng_feed.php?rssid=" + rssId,
 				success: function(data) {
 
 					responseString="";
@@ -91,7 +116,7 @@ include("inc/header.php");
 			//COMMENTS CONTAINER HEIGHT ANIMATION -----------------------------------------
 			$( "#commentslink" ).click(function() {
 
-				if(commentsUpFlag) { 
+				if(commentsUpFlag) {
 
 				  	$("#commentscontainer").animate({
 				    	bottom: "-400"
@@ -118,7 +143,7 @@ include("inc/header.php");
 			});
 
 			//UPDATE COMMENTS -------------------------------------------------------------
-			$(document).on("click", '.updatecom', function(event) { 
+			$(document).on("click", '.updatecom', function(event) {
 				var commentId = $(this).attr('comid');
 				$('#commentbtn').attr('mode','update');
 				$('#commentbtn').attr('commentid',commentId);
@@ -138,7 +163,7 @@ include("inc/header.php");
 
 			//INSERT / UPDATE BUTTON CLICK =================================================
 
-			$(document).on("click", '#commentbtn', function(event) { 
+			$(document).on("click", '#commentbtn', function(event) {
 
 
 			var ajaxString = "";
@@ -152,11 +177,11 @@ include("inc/header.php");
 
 			//INSERT COMMENT - SEND --------------------------------------------------------
 
-			
+
 				if($(this).attr('mode')=='insert') {
 
 					ajaxString = "action=insert&user_id=" + userId + "&rss_id=" + rssId + "&comment_content=" + commentContent;
-					
+
 				}
 
 
@@ -165,7 +190,7 @@ include("inc/header.php");
 				if($(this).attr('mode')=='update') {
 
 					ajaxString = "action=update&comment_id=" + $(this).attr('commentid') + "&comment_content=" + commentContent;
-					
+
 				}
 
 
@@ -179,7 +204,7 @@ include("inc/header.php");
 					type: 'GET',
 					dataType: "jsonp",
 					jsonp: "callback",
-					url: "https://webflix.afotheringham.co.uk/mng_comment.php?" + ajaxString,
+					url: "//localhost/webflix-1/mng_comment.php?" + ajaxString,
 					success: function(data) {
 
 						responseString="";
@@ -227,7 +252,7 @@ include("inc/header.php");
 
 
 			//DELETE COMMENT ---------------------------------------------------------------
-			$(document).on("click", '.deletecom', function(event) { 
+			$(document).on("click", '.deletecom', function(event) {
 
 				$.ajax({
 					beforeSend: function() {
@@ -239,7 +264,7 @@ include("inc/header.php");
 					type: 'GET',
 					dataType: "jsonp",
 					jsonp: "callback",
-					url: "https://webflix.afotheringham.co.uk/mng_comment.php?action=delete&comment_id=" + $(this).attr('comid'),
+					url: "//localhost/webflix-1/mng_comment.php?action=delete&comment_id=" + $(this).attr('comid'),
 					success: function(data) {
 
 						responseString="";
@@ -283,7 +308,7 @@ include("inc/header.php");
     		});
 
 		});
-			
+
 			//COMMENT RETRIEVAL FUNCTION ---------------------------------------------------
 			function selectComments() {
 
@@ -299,7 +324,7 @@ include("inc/header.php");
 				type: 'GET',
 				dataType: "jsonp",
 				jsonp: "callback",
-				url: "https://webflix.afotheringham.co.uk/mng_comment.php?action=select&user_id=" + userId + "&rss_id=" + rssId,
+				url: "//localhost/webflix-1/mng_comment.php?action=select&user_id=" + userId + "&rss_id=" + rssId,
 				success: function(data) {
 
 					responseString="";
@@ -337,30 +362,40 @@ include("inc/header.php");
 
 	<body>
 
-		<header>
-				RSS Feed App
-		</header>
-
-		<main>
-			<div id="messages">
+<div class="container-fluid splash-left5">
+	<?php include 'inc/nav.php' ?>
+	<div class="row" style="margin-top: 4em;">
+	<div class="col-md-3"></div>
+	<div class="col-md-4" >
+		<main style="background-color: lightgrey; padding: 3%; padding-left: 5%;
+		  padding-right: 5%; border-radius: 25px; border: 2px solid #494949">
+			<div class='rsstitle' style="color: black;">
 
 			</div>
 
+
 		</main>
 
+	</div>
+	<div class="col-md-5" id="messages" style="position: relative;">
+
+		<div id="commentscontainer" style="position: fixed; opacity: 0.7; background-color: #494949; border-radius: 25px; padding: 4%;  border: 2px solid #ff8d3f;">
+			<h1 style="color: orange">	<a href="#" id="commentslink"><strong>Comments</strong></a> </h1>
+				<div id="comcontent">
+
+				</div>
+				<textarea id="commentbox" placeholder="Write a comment on this feed...."></textarea>
+				<input type="button" value="Add Comment" id="commentbtn" mode="insert" />
+				<input type="button" value="Clear Comment" id="clearbtn" />
+		</div>
+	</div>
+</div>
+</div>
 		<footer>
 				Welcome
 		</footer>
 
-		<div id="commentscontainer">
-				<a href="#" id="commentslink">Comments</a>
-				<div id="comcontent">
 
-				</div>
-				<textarea id="commentbox"></textarea>
-				<input type="button" value="Add Comment" id="commentbtn" mode="insert" />
-				<input type="button" value="Clear Comment" id="clearbtn" />
-		</div>
 
 		<img src="images/loading.gif" id="loading" />
 
@@ -371,4 +406,3 @@ include("inc/header.php");
 <body>
 </body>
 </html>
-

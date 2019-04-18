@@ -1,7 +1,8 @@
 
 <div class="row">
 	<div class="col-md-6">
-<h1  class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s" id="webflix">WEBFLIX </h1>
+<h1  class="wow fadeIn" data-wow-duration="2s"
+data-wow-delay="0.3s" id="webflix" style="margin-left: 5%;">WEBFLIX </h1>
 
 
 </div>
@@ -14,7 +15,7 @@
 	</a>
 </li>
 <li class="nav-item">
-	<a class="nav-link" href="<?php echo $userLoggedIn; ?>" title="My Profile"><i class="fas fa-user-circle"></i>
+	<a class="nav-link" href="profile.php" title="My Profile"><i class="fas fa-user-circle"></i>
 	</a>
 </li>
 <li class="nav-item">

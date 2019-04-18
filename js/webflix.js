@@ -1,10 +1,10 @@
-
+/* Theme Change */
  if($.cookie("css")) {
     $("link").attr("href",$.cookie("css"));
   }
 $(document).ready(function() {
 
-  $("#nav li a").click(function() {
+  $("#themes a").click(function() {
 
     $("link").attr("href",$(this).attr('rel'));
     $.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   });
 });
+/* Settings page show/hide divs */
 $(document).ready(function(){
   $("#hide").click(function(){
     $("#profimg").hide();

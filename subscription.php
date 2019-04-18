@@ -27,7 +27,7 @@ while ( $row = mysqli_fetch_array( $results ) ) {
 
 
 	?>
-
+<?php include 'inc/nav.php' ?>
 <div>
 <h2 style="color: white;"><?php echo $rssRow['rss_name']; ?><br/></h2>
 
