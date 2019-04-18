@@ -53,7 +53,7 @@ $result = mysqli_query( $con,
 	//loop through each row from results
 	while ($row=mysqli_fetch_array($result)) {
 	?>
-	<div class="container-fluid">
+	<div class="container-fluid splash-left4">
 
 		<div class="row">
 
@@ -62,7 +62,7 @@ $result = mysqli_query( $con,
 				<div>
 					<h1 class="itemheader">
 						<?php echo $row['rss_name']; ?>
-						<?php echo $row['rss_url']; ?>
+
 					</h1>
 					<img class="img-responsive" src="<?php echo $row['rss_image']; ?>" width="300"/>
 
@@ -104,7 +104,7 @@ $result = mysqli_query( $con,
 		rssfeed_item_description_link_color="#333";
 		rssfeed_item_description_tag="off";
 		rssfeed_no_items="0";
-		rssfeed_cache = "9e9768a2cf51bf44252216f46af129d6";
+		rssfeed_cache = "<?php echo $row['rss_feed_cache']; ?>";
 		//-->
 
 		</script>

@@ -18,6 +18,15 @@ i {
 .fa-plus-circle {
 	color: white;
 }
+.themechoice {
+	margin-right: 1em;
+	opacity: 0.7;
+}
+.themechoice:hover {
+	opacity: 1;
+	transition: 0.7s;
+	text-decoration: none;
+}
 </style>
 <div class="container-fluid splash-left5 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
 	<?php include 'inc/nav.php' ?>
@@ -28,14 +37,45 @@ i {
 	<!--Close account form-->
 	<h2 class="set-head" style="border-radius: 25px; padding: 2%; margin-bottom: 4%; text-align: center; opacity: 0.7;">
 		<strong>Special Edition Themes</strong><a href="#" id="show4"><i class="fas fa-plus-circle"></i></a></h2>
-		<div id="themes" style="display: none;" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-				<h1>Boom</h1>
-				<ul id="nav">
-					<li><a href="#" rel="css/marvel.css">MVL</a></li>
-					<li><a href="#" rel="css/dc.css">DC</a></li>
+		<div id="themes" style="display: none; padding: 2%;" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+
+			<a class="themechoice" href="#" rel="css/marvel.css">
+					<span style="color: white; background-color: red;
+					font-size: 25px; padding: 1.5%; border-radius: 25px;
+					 width: 50%; ">
+						<strong>Marvel</strong></span>
+					</a>
+					<a class="themechoice" href="#" rel="css/dc.css">
+							<span style="color: white; background-color: blue; font-size: 25px; padding: 1.5%; border-radius: 25px; width: 50%;">
+								<strong>DC</strong></span>
+							</a>
+							<a class="themechoice" href="#" rel="css/webflix.css">
+									<span style="color: #ff8d3f; background-color: #494949; font-size: 25px; padding: 1.5%; border-radius: 25px; width: 50%;">
+										<strong>WEBFLIX</strong></span>
+									</a>
+
+
+											<a class="themechoice" href="#" rel="css/gangsta.css">
+													<span style="color: white; background-color: black; font-size: 25px;
+													 padding: 1.5%; border-radius: 25px; width: 50%;">
+														<strong>Gangsta Theme</strong></span>
+													</a>
+													<br/>
+													<br/>
+
+													<a class="themechoice" href="#" rel="css/romance.css">
+															<span style="color: white; background-color: purple; font-size: 25px;
+															 padding: 1.5%; border-radius: 25px; width: 50%; margin-left: 30%;">
+																<strong>Love Theme</strong></span>
+															</a>
+
+
+
+
+				<!--<li><a href="#" rel="css/dc.css">DC</a></li>
 					<li><a href="#" rel="css/kids.css">Kids</a></li>
-					<li><a href="#" rel="css/webflix.css">WEBFLIX</a></li>
-				</ul>
+					<li><a href="#" rel="css/webflix.css">WEBFLIX</a></li>-->
+
 				 <a href="#" id="hide4" title="Close"><i class="fas fa-times-circle cross"></i></a>
 			</div>
 	</div>
