@@ -82,8 +82,8 @@ if ( isset( $_POST[ 'register_button' ] ) ) {
 		}
 	}
 
-	if ( strlen( $password ) > 30 || strlen( $password ) < 8 ) { //password must be between 8-30 characters
-		array_push( $error_array, "Your password must be between 8 and 30 characters<br>" );
+	if ( strlen( $password ) > 30 || strlen( $password ) < 5 ) { //password must be between 8-30 characters
+		array_push( $error_array, "Your password must be between 5 and 30 characters<br>" );
 	}
 	if ( empty( $error_array ) ) { // if error is empty then write to database
 		$password = md5( $password ); // Encrypt using MD5
@@ -109,7 +109,7 @@ if ( isset( $_POST[ 'register_button' ] ) ) {
 
 		$query = mysqli_query( $con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic','','','','user','','')" );
 
-		array_push( $error_array, "<span style='color: aqua;'>You are now registered. Please login!</span><br>" );
+		array_push( $error_array, "You are now registered. Please login!<br>" );
 
 		//clear session variables
 		$_SESSION[ 'reg_fname' ] = "";

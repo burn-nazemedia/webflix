@@ -28,7 +28,7 @@ include("inc/header.php");
 					type: 'GET',
 					dataType: "jsonp",
 					jsonp: "callback",
-					url: "//localhost/webflix-1/mng_subscription.php?action=" + action + "&user_id=" + userid + "&rss_id=" + rssid,
+					url: "https://webflix.afotheringham.co.uk/mng_subscription.php?action=" + action + "&user_id=" + userid + "&rss_id=" + rssid,
 
 					success: function(data) {
 
@@ -90,7 +90,7 @@ include("inc/header.php");
 				type: 'GET',
 				dataType: "jsonp",
 				jsonp: "callback",
-				url: "//localhost/webflix-1/mng_subscription.php?action=select&user_id=" + userid,
+				url: "https://webflix.afotheringham.co.uk/mng_subscription.php?action=select&user_id=" + userid,
 
 				success: function(data) {
 

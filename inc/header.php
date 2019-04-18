@@ -53,6 +53,8 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="assets/css/register.css">
+	<link rel="stylesheet" href="assets/css/register.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="js/webflix.js"></script>
@@ -60,6 +62,7 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<script src="js/jquery-ui.js"></script>
 	<script>
 					new WOW().init();
 					</script>

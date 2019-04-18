@@ -1,0 +1,4 @@
+Webflix 2.0
+
+Search functionality added to movie page.
+Predictive sersch functinality added.

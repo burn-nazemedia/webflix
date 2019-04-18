@@ -80,7 +80,7 @@ while($row=mysqli_fetch_array($updateQuery)) {
 		<h3>Movie URL</h3><input type="text" name="movie_trailer" value="<?php echo $movie_trailer;?>"/><br />
 		<h3>Thumbnail:</h3><input type="file" name="thumb" /> <br />
 		<h3>Main Image:</h3><input type="file" name="main" /> <br />
-		<input type="submit" class="adminsubmit" value="Update Product" />
+		<input type="submit" class="adminsubmit" value="Update Movie" />
 	</form>
 				
 

@@ -153,7 +153,7 @@ if($_POST['action']=="insert") {
 
 		$insertResult = mysqli_query($con,$insertSql);
 		if($insertResult){
-			header("location: detail.php?id=" .
+			header("location: movie.php?id=" .
 			mysqli_insert_id($con));
 		}else{
 			$_SESSION['message'] = "Insertion failed!";

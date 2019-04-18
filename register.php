@@ -89,14 +89,14 @@ hr {
 							}
 						?>" required>
 							<br>
-							<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
+							<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "<p style='color: white'>Your first name must be between 2 and 25 characters</p><br>"; ?>
 							<input type="text" name="reg_lname" placeholder="Last Name" value="<?php
 							if(isset($_SESSION['reg_lname'])) {
 								echo $_SESSION['reg_lname'];
 							}
 						?>" required>
 							<br>
-							<?php if(in_array("Your last name must be between 2 and 25 characters<br>", $error_array)) echo "Your last name must be between 2 and 25 characters<br>"; ?>
+							<?php if(in_array("Your last name must be between 2 and 25 characters<br>", $error_array)) echo "<p style='color: white'>Your last name must be between 2 and 25 characters</p><br>"; ?>
 							<input type="email" name="reg_email" placeholder="Email" value="<?php
 							if(isset($_SESSION['reg_email'])) {
 								echo $_SESSION['reg_email'];
@@ -112,7 +112,7 @@ hr {
 							<br>
 							<?php if(in_array("Email already in use<br>", $error_array)) echo "Email already in use<br>";
 						else if(in_array("Invalid format<br>", $error_array)) echo "Invalid format<br>";
-						else if(in_array("Emails do not match<br>", $error_array)) echo "Emails do not match<br>"; ?>
+						else if(in_array("Emails do not match<br>", $error_array)) echo "<p style='color: white'>Emails do not match</p><br>"; ?>
 
 
 							<input type="password" name="reg_password" placeholder="Password" required>
@@ -120,8 +120,8 @@ hr {
 							<input type="password" name="reg_password2" placeholder="Confirm Password" required>
 							<br>
 							<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>";
-						else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
-						else if(in_array("Your password must be between 5 and 30 characters<br>", $error_array)) echo "Your password must be between 5 and 30 characters<br>"; ?>
+						else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "<p style='color: white'>Your password can only contain english characters or numbers</p><br>";
+						else if(in_array("Your password must be between 5 and 30 characters<br>", $error_array)) echo "<p style='color: white'>Your password must be between 5 and 30 characters</p><br>"; ?>
 
 							<label><input class="confirm" type="checkbox" name="confirm-check" label="I agree to the terms and conditions" required>&nbsp;I agree to the <a target="_blank" href="terms.php">terms and conditions</a></label>
 							<br/>
@@ -129,14 +129,14 @@ hr {
 
 							<input style="background-color: #ff8d3f; border: 0; color: #494949; width: 30%;" class="btn-primary" type="submit" name="register_button" value="Register"><br/>
 
-							<?php if(in_array("<span style='color: orange;'>You are now registered. Please login!</span><br>", $error_array)) echo "<span style='color: aqua;'>You are now registered. Please login!</span><br>"; ?>
+							<?php if(in_array("You are now registered. Please login!<br>", $error_array)) echo "<h2 style='color: white;'>You are now registered. Please login!</h2><br>"; ?>
 							<a href="#" id="signin" class="signin">Already have an account? Login here</a>
 
 						</form>
 					</div>
 
 				</div>
-				<!--<div style="margin-top:35%; color:#fff" class="col-md-4 col-md-offset-4"><p>Copyright Yujin network 2018</p></div>-->
+				
 				<div class="space-div"></div>
 			</div>
 		</div>

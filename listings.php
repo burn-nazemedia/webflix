@@ -3,7 +3,6 @@ session_start();
 //include database connection
 include( "inc/header.php" );
 
-
 if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 	$result = mysqli_query( $con,
@@ -21,21 +20,7 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 	);
 
 
-} else if ( isset( $_GET[ 'cat' ] ) ) {
-
-	$result = mysqli_query( $con,
-		"SELECT *
-				 FROM `movie`
-				 WHERE `movie_genre`='{$_GET['cat']}'"
-	);
-
-
-
-
-
-
-
-} else {
+}  else {
 	$result = mysqli_query( $con,
 		"SELECT *
 				 FROM `movie`"
@@ -69,13 +54,34 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 	<h1 class="splash-msg wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-left: 10%;">Movie Database</h1>
 </div>
 <div class="col-md-6 text=center">
+<script type="text/javascript">
+$(document).ready (function(){
+	
+	$("#searchterm").autocomplete({
+		source:"mng_search.php",
+		minLength: 2,
+		select: function(event, ui)  {
+			
+			window.location="detail.php?id="+ui.item.id;
+			
+		}
+	});
+	
+});
 
-							 <form method="post">
-									 <input type="text" class="homeSearch" placeholder="Search..."/>
+
+
+
+</script>
+
+							 <form action="listings.php" method="get">
+									 <input type="text" name="searchterm" id="searchterm" class="homeSearch" placeholder="Search..."/>
+								 
 							 </form>
 
 </div>
 </div>
+	
 	<hr/>
 	<div class="row" style="margin-left: 4%;">
 

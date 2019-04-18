@@ -26,7 +26,8 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 
 <?php
 if ( $_SESSION[ 'user_level' ] == 'admin' ) {
-	echo '<a class="adminlink" href="admin.php"><h3>Admin</h3></a>';
+	echo '<a class="adminlink" href="admin.php"><h3>Admin add Movies</h3></a>';
+	echo '<a class="adminlink" href="admin_rss.php"><h3>Admin add RSS Feeds</h3></a>';
 
 }
 ?>
