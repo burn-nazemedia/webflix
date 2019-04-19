@@ -13,6 +13,20 @@ $(document).ready(function() {
 
   });
 });
+/* offline alert message */
+window.addEventListener('online', function() {
+  if(!navigator.serviceWorker && !window.SyncManager) {
+  fetchData().then(function(response) {
+  if(response.length > 0) {
+  return sendData();
+  }
+  });
+  }
+  });
+  
+  window.addEventListener('offline', function() {
+  alert('You appear to have lost your internet connection, check your internet settings to reconnect!');
+  });
 /* Settings page show/hide divs */
 $(document).ready(function(){
   $("#hide").click(function(){
@@ -54,7 +68,20 @@ $(document).ready(function(){
     $("#themes").show();
   });
 });
-
+window.addEventListener('online', function() {
+  if(!navigator.serviceWorker && !window.SyncManager) {
+  fetchData().then(function(response) {
+  if(response.length > 0) {
+  return sendData();
+  }
+  });
+  }
+  });
+  
+  window.addEventListener('offline', function() {
+  alert('You have lost internet access!');
+  });
+  
 // $(document).ready(function() {
 //        $.support.cors = true;
 //       $("#login").click(function() {
