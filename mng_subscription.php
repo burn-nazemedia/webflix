@@ -77,11 +77,11 @@ if($action=='select') {
 			//otherwise do subscribe link
 			if($matchFlag) {
 
-				$response .= "<div class='sublinkbar'><a href='#' class='sublink' action='unsubscribe' rssid='" . $rssRow['rss_id'] . "' >You are Subscribed to " . $rssRow['rss_name']."...Unsubscribe?</a><br/><br/></div>";
+				$response .= "<div class='sublinkbar'><a href='#' class='sublink' action='unsubscribe' rssid='" . $rssRow['rss_id'] . "' >You are Subscribed to <span id='rssnames'>" . $rssRow['rss_name']."</span>...Unsubscribe?</a><br/><br/></div>";
 
 			} else {
 
-				$response .= "<div class='sublinkbar'><a href='#' class='sublink' action='subscribe' rssid='" . $rssRow['rss_id'] . "' >Subscribe to " .$rssRow['rss_name']."?</a><br/><br/></div>";
+				$response .= "<div class='sublinkbar'><a href='#' class='sublink' action='subscribe' rssid='" . $rssRow['rss_id'] . "' >Subscribe to <span id='rssnames2'>" .$rssRow['rss_name']."</span>?</a><br/><br/></div>";
 
 			}
 

@@ -44,8 +44,8 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 ?>
 
 <!--------------------------------MOBILE ADMIN---------------------------------->
-<div class="container-fluid">
 
+<div class="container-fluid splash-left4  wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">
 	<div class="row">
 
 		<div>
@@ -60,8 +60,6 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 
 
 	</div>
-</div>
-<div class="container-fluid splash-left4  wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">
 	<?php include 'inc/nav.php' ?>
 	<div class="row">
 
@@ -117,8 +115,13 @@ if ( isset( $_GET[ 'searchterm' ] ) ) {
 			} // end while loop
 			?>
 		</div>
-
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<?php include 'inc/footer.php' ?>
 
 	</div>
 

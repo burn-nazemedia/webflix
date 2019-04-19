@@ -16,7 +16,7 @@ height: 100%;
   background-color: hotpink;
   padding: 1%;
   padding-left: 4%;
-  width: 30%;
+    width: 240px;
   margin-top: 0.5em;
   border-radius: 25px;
 
@@ -104,7 +104,7 @@ opacity: 0.1;
   z-index: -2;
 }
 .splash-left2::after {
-  background-image: url('../images/Happy-Gilmore.jpg');
+  background-image: url('../images/ghost1.jpg');
  background-size: cover;
 content: "";
 display: block;
@@ -114,7 +114,7 @@ left: 0px;
 width: 100%;
 height: 100%;
 z-index: -1;
-opacity: 0.1;
+opacity: 0.3;
 }
 /*profile*/
 .splash-left3 {
@@ -219,6 +219,117 @@ h2, h1, h3, h4, h5 {
   background-color: hotpink !important;
   color: #a0daff !important;
   transition: 0.7s;
+}
+.movdet {
+  background-color: #494949;
+  opacity: 0.7;
+  border-radius: 25px;
+  border: 2px solid hotpink;
+  padding: 2%;
+  text-align: justify;
+}
+.starhead {
+  color: lightblue;
+}
+.starname {
+  color: #d5d6d2;
+}
+.splash-msg1 {
+  color: hotpink !important;
+}
+.genre {
+  color: red !important;
+}
+.movieperson {
+  margin-bottom: 2em;
+}
+.proftile {
+  background-color:  #494949;
+  border-radius: 25px;
+  opacity: 0.7;
+  border: 2px solid hotpink;
+
+}
+.profSubs {
+    background-color:  #494949;
+    height: auto;
+    border-radius: 25px;
+    padding: 1.5%;
+    opacity: 0.7;
+    border: 2px solid hotpink;
+}
+.profRssTitle {
+  color: lightblue !important;
+  font-weight: 600;
+}
+.rsstitle {
+
+  padding: 1%;
+  margin-bottom: 1em;
+  border-radius: 25px;
+  color: white !important;
+
+}
+.rsslink {
+  color: lightblue;
+  font-size: 20px;
+  font-weight: bold;
+}
+#rssnames {
+  color: lightblue !important;
+  font-weight: bold;
+}
+#rssnames2 {
+  color: lightblue !important;
+  font-weight: bold;
+}
+#rsstitle {
+  background-color: white !important;
+}
+.profRssName {
+  color: white;
+  font-weight: 500;
+}
+#subcontent {
+  background-color: #494949;
+  border-radius: 25px;
+  border: 2px solid hotpink;
+  padding: %;
+}
+.sublink {
+  background-color: #494949;
+  color: white !important;
+  padding: 2% !important;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.rss_tile {
+  background-color: #494949 !important;
+  opacity: 0.8;
+}
+#subscribed {
+  color: white;
+  background-color: green;
+  border-radius: 25px;
+  padding: 2%;
+  font-weight: bold;
+}
+#notsubscribed {
+  color: white;
+  background-color: red;
+  border-radius: 25px;
+  padding: 2%;
+  font-weight: bold;
+}
+#feed {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+.listingname {
+  color: hotpink;
 }
 .homeSearch {
     width: 40% !important;
@@ -416,12 +527,12 @@ h2, h1, h3, h4, h5 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .splash-msg {
-font-family: 'Fredericka the Great';
-color: hotpink;
+
+color: lightblue;
 font-weight: 400;
 font-size: 45px;
 margin-top: 5%;

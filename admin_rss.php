@@ -31,7 +31,7 @@ include( "inc/header.php" );
 
 	<link href="css/style.css" rel="stylesheet">
 
-	<?php 
+	<?php
 
 	include("inc_scriptpackage.inc.php");
 
@@ -55,42 +55,30 @@ include( "inc/header.php" );
 
 <body>
 
-	<?php 
 
-	
-
-	include("inc_nav.inc.php");
-
-	
-
-	?>
-
-	<div class="container">
-
+	<div class="container-fluid splash-left5">
+<?php include 'inc/nav.php' ?>
 		<div class="row">
-			
-            
-			<div class="col-md-10 col-md-offset-1 adminformparent">
+<div class="col-md-4"></div>
 
-	
+			<div class="col-md-4  adminformparent">
 
+<h2 style="margin-top: 2em;">Insert RSS Feed</h2>
 
-
-
-
-<h1>Insert RSS</h1>
-	
 	<form method="post" enctype="multipart/form-data" action="mng_rss.php"><br />
 		<input type="hidden" name="action" value="insert"/><br />
 		<h3>RSS Name:</h3><input class="adminfield" type="text" name="rss_name"/>
 		<br />
 		<h3>Rss URL:</h3><input class="adminfield" type="text" name="rss_url"/>
-		<h3>RSS Image:</h3><input type="file" name="main" />
+		<h3>Rss Feed Cache:</h3><input class="adminfield" type="text" name="rss_feed_cache"/>
+		<h3>RSS Image:</h3><br/><input type="file" name="main" />
+		<br />
+		<br />
 		<br />
 		<input type="submit" class="adminsubmit" value="Insert RSS" />
 	</form>
 
-				
+
 
 
 
@@ -109,13 +97,13 @@ include( "inc/header.php" );
 
 	<hr>
 
-	<?php 
+	<?php
 
-	
+
 
 	include("footer.php");
 
-	
+
 
 	?>
 

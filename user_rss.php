@@ -8,7 +8,7 @@ include( "inc/form_handlers/rss_handler.php" );
 
 		<h1 style="color:#1f1f1f">Rss Settings</h1>
 		<br>
-		
+
 		<?php
 		$user_data_query = mysqli_query( $con, "SELECT email, user_rss_feed_1, user_rss_feed_2, user_rss_feed_3 FROM users WHERE username='$userLoggedIn'" );
 		$row = mysqli_fetch_array( $user_data_query );
@@ -25,7 +25,8 @@ include( "inc/form_handlers/rss_handler.php" );
 				<div class="col-md-2">
 					<p class="setting-place">RSS Feed 1:</p>
 				</div>
-				<div class="col-md-6 setting-field"><input type="text" name="user_rss_feed_1" value="<?php echo $rss_feed_1; ?>">
+				<div class="col-md-6 setting-field"><input style="color: black;" type="text" name="user_rss_feed_1" value="<?php echo $user_rss_feed_1; ?>">
+			g-waves.com/js/rss-feed.js"></script>
 				</div>
 
 			</div>
@@ -34,7 +35,7 @@ include( "inc/form_handlers/rss_handler.php" );
 				<div class="col-md-2">
 					<p class="setting-place">RSS Feed 2</p>
 				</div>
-				<div class="col-md-6 setting-field"><input type="text" name="user_rss_feed_2" value="<?php echo $rss_feed_2; ?>">
+				<div class="col-md-6 setting-field"><input style="color: black;" type="text" name="user_rss_feed_2" value="<?php echo $rss_feed_2; ?>">
 				</div>
 
 			</div>
@@ -43,7 +44,7 @@ include( "inc/form_handlers/rss_handler.php" );
 				<div class="col-md-2">
 					<p class="setting-place">RSS Feed 3:</p>
 				</div>
-				<div class="col-md-6 setting-field"><input type="text" name="user_rss_feed_3" value="<?php echo $rss_feed_3; ?>">
+				<div class="col-md-6 setting-field"><input style="color: black;" type="text" name="user_rss_feed_3" value="<?php echo $rss_feed_3; ?>">
 				</div>
 
 			</div>
@@ -60,7 +61,7 @@ include( "inc/form_handlers/rss_handler.php" );
 	</div>
 	<br>
 	<br>
-	<h4>Close Account</h4>
+
 
 
 </div>
@@ -69,10 +70,9 @@ include( "inc/form_handlers/rss_handler.php" );
 </div>
 <br>
 <br>
-	
+
     <script>
     if ( window.history.replaceState ) {
       window.history.replaceState( null, null, window.location.href );
     }
-    </script>vb
-    
+    </script>

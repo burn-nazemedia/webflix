@@ -160,8 +160,8 @@ location. reload(true);
 </script>
 <body class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
 	<!--------------------------------MOBILE ADMIN---------------------------------->
-	<div class="container-fluid">
 
+	<div class="container-fluid splash-left6">
 		<div class="row">
 
 			<div>
@@ -176,8 +176,6 @@ location. reload(true);
 
 
 		</div>
-	</div>
-	<div class="container-fluid splash-left6">
 	<?php include( "inc/nav.php" ); ?>
 		<h1 class="splash-msg wow fadeIn"  data-wow-duration="2s" data-wow-delay="1.5s"
 	 style="margin-top: 4%; margin-bottom: 4%; margin-left: 5%;">Movie RSS feeds
@@ -200,9 +198,9 @@ location. reload(true);
 			//loop through each row from results
 			while ($row=mysqli_fetch_array($result)) {
 			?>
-<div class="col-md-2 text-center wow fadeIn"  data-wow-duration="2s" data-wow-delay="2.5s"
+<div class="col-md-2 col-sm-4 text-center wow fadeIn"  data-wow-duration="2s" data-wow-delay="2.5s"
 style="margin-bottom: 3%; margin-right: 2%;">
-	<div style="width: 100%; background-color: #494949; border-radius: 25px; margin-left: 10%;">
+	<div class="rss_tile" style="width: 100%; background-color: #494949; border-radius: 25px; margin-left: 5%;">
 
 
 
@@ -260,13 +258,7 @@ style="margin-bottom: 3%; margin-right: 2%;">
 
 
 
-		<!--	<form method="post" enctype="multipart/form-data" action="mng_subscription.php">
-		<input type="hidden" name="id" value="<?php echo $_GET['user_id'];?>"/>
-		<input type="hidden" name="action" action="subscribe" value="subscribe"/>
 
-
-		<input type="submit" class="adminsubmit btn btn-primary register" value="Subscribe" />
-	</form>-->
 <br/>
 
 
@@ -286,6 +278,7 @@ style="margin-bottom: 3%; margin-right: 2%;">
 </div>
 </div>
 		</div>
+		<?php include 'inc/footer.php' ?>
 	</div>
 
 </body>

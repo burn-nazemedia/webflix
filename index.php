@@ -24,26 +24,28 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 ?>
 
 
-<?php
-if ( $_SESSION[ 'user_level' ] == 'admin' ) {
-	echo '<a class="adminlink" href="admin.php"><h3>Admin</h3></a>';
 
-}
-?>
-<?php
-if ( $_SESSION[ 'user_id' ] == '4' ) {
-	echo '<a class="adminlink" href="admin.php"><h3>userid</h3></a>';
 
-}
-?>
 
 	<body class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
   <div class="container-fluid splash-left4">
 		<?php include 'inc/nav.php' ?>
+	<!--	<?php
+		if ( $_SESSION[ 'user_level' ] == 'admin' ) {
+			echo '<a class="adminlink" href="admin.php"><h4>Admin - Add Movie</h4></a>';
+
+		}
+		?>
+		<?php
+		if ( $_SESSION[ 'user_id' ] == '4' ) {
+			echo '<a class="adminlink" href="admin.php"><h4>userid</h4></a>';
+
+		}
+		?>-->
 			<h2 id="welcome" class="" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-top: 2em;">
 				Welcome to <span class="" data-wow-duration="2s" data-wow-delay="1.2s" id="webflix1">
 				<strong>	WEBFLIX </strong>
-				</span>&nbsp; <span class="" data-wow-duration="2s" data-wow-delay="1.6s"> movie database, movie rss feeds & more...</span></h2>
+			</span>&nbsp; <span class="" data-wow-duration="2s" data-wow-delay="1.6s">movie rss feeds & movie database</span></h2>
 			<br/>
 		<div class="row" style="margin-top: 5em; padding-left: 5%; padding-right: 5%;">
 
@@ -90,5 +92,6 @@ if ( $_SESSION[ 'user_id' ] == '4' ) {
 }
 ?>
 </div>
+<?php include 'inc/footer.php' ?>
 </div>
 </body>

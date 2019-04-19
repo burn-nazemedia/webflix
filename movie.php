@@ -53,25 +53,28 @@ $result = mysqli_query( $con,
 //loop through each row from results
 while ( $row = mysqli_fetch_array( $result ) ) {
 	?>
-	<div class="container-fluid">
-
-		<div class="row">
-
-			<div class="col-md-8">
+	<div class="container-fluid splash-left">
+<?php include 'inc/nav.php'?>
+		<div class="row" style="margin-top: 5em;">
+<div class="col-md-2"></div>
+			<div class="col-md-4 movdet" style="text-align: justified;">
 				<?php include("inc_search.inc.php"); ?>
 				<div>
-					<h1 class="itemheader">
-						<?php echo $row['movie_name']; ?>
+
+					<img class="img-responsive" src="<?php echo $row['movie_image_main']; ?>" style="width: 50%; border-radius: 25px;"/>
+				<br/>	<br/><h1 class="splash-msg1" style="color: #ff8d3f;">
+						<?php echo $row['movie_name'];  ?> <br/> <span class="splash-msg" style="color: #d5d6d2; font-size: 30px;"> <?php echo $row['movie_release_date']; ?></span>
 					</h1>
-					<img class="img-responsive" src="<?php echo $row['movie_image_main']; ?>" width="300"/>
-					<h2>
+					<p class="splash-msg" style="font-size: 25px; color: #d5d6d2; ">
+
 						<?php echo $row['movie_description']; ?><br/>
-					</h2>
+					</p>
 
-
-					<p>
+         	<img class="img-responsive" src="<?php echo $row['movie_image_thumb']; ?>" style="width: 25%; border-radius: 25px;"/>
+<br/><br/>
+					<p  style="color: white;">
 						Genre:&nbsp;
-						<?php echo $row['movie_genre']; ?> </p>
+						<span class="genre" style="color: #ff8d3f;"><?php echo $row['movie_genre']; ?> </span></p>
 					<!--Update and delete links for admin-->
 					<?php
 
@@ -90,165 +93,173 @@ while ( $row = mysqli_fetch_array( $result ) ) {
 					?>
 				</div>
 			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3 movdet" style="text-align: justified;">
+				<!--ACTORS-->
+				<?php
+				//get all RSS feeds
+
+				$actorResult = mysqli_query( $con,
+					"SELECT *
+										FROM `actor`" );
 
 
+
+				//flag to see if match with user (if they are subscribed)
+				$matchFlag = false;
+
+
+
+
+				//get user linked subscriptions
+				$movieActorResult = mysqli_query( $con,
+					"SELECT *
+									FROM `actor`
+									INNER JOIN `movie_actor`
+									ON `movie_actor`.`actor_id` = `actor`.`actor_id`
+									WHERE `movie_actor`.`movie_id`={$id}" );
+
+				//this nested loop is for the subscription query
+				while ( $subRow = mysqli_fetch_array( $movieActorResult ) ) {
+
+					//check if the address matches between the two
+					//(could check title, however rss_id would be ambiguous
+					//as it appears in two tables)
+					/*$firstTableAddress = $rssRow['rss_url'];
+					$secondTableAddress = $subRow['rss_url'];
+
+					if($firstTableAddress==$secondTableAddress) {
+						$matchFlag = true;
+					}*/
+					?>
+				<div class="movieperson">
+
+					<h1 class="starhead">Actors</h1>
+
+					<h3 class="starname">
+						<?php echo $subRow['actor_fname']; ?>&nbsp;
+						<?php echo $subRow['actor_sname']; ?>
+			<img src="<?php echo $subRow['actor_img'];?>"
+			 style="width: 80px; border-radius: 25px; ">
+		 </h3>
+
+
+				</div>
+				<?php }
+				?>
+
+
+				<?php
+				//get all from actor
+
+				$directorResult = mysqli_query( $con,
+					"SELECT *
+										FROM `director`" );
+
+
+
+				//flag to see if match with user (if they are subscribed)
+				$matchFlag = false;
+
+
+
+
+				//get user linked subscriptions
+				$movieDirectorResult = mysqli_query( $con,
+					"SELECT *
+									FROM `director`
+									INNER JOIN `movie_director`
+									ON `movie_director`.`director_id` = `director`.`director_id`
+									WHERE `movie_director`.`movie_id`={$id}" );
+
+				//this nested loop is for the subscription query
+				while ( $directorRow = mysqli_fetch_array( $movieDirectorResult ) ) {
+
+					//check if the address matches between the two
+					//(could check title, however rss_id would be ambiguous
+					//as it appears in two tables)
+					/*$firstTableAddress = $rssRow['rss_url'];
+					$secondTableAddress = $subRow['rss_url'];
+
+					if($firstTableAddress==$secondTableAddress) {
+						$matchFlag = true;
+					}*/
+					?>
+				<div class="movieperson">
+
+					<h1 class="starhead">Directors</h1>
+
+					<h3 class="starname">
+						<?php echo $directorRow['director_fname']; ?>&nbsp;
+						<?php echo $directorRow['director_sname']; ?>
+						<img src="<?php echo $directorRow['director_image'];?>"
+						 style="width: 80px; border-radius: 25px; ">
+					</h3>
+
+
+				</div>
+				<?php }
+				?>
+
+				<!--Writers-->
+
+				<?php
+				//get all from actor
+
+				$writerResult = mysqli_query( $con,
+					"SELECT *
+										FROM `writer`" );
+
+
+
+				//flag to see if match with user (if they are subscribed)
+				$matchFlag = false;
+
+
+
+
+				//get user linked subscriptions
+				$movieWriterResult = mysqli_query( $con,
+					"SELECT *
+									FROM `writer`
+									INNER JOIN `movie_writer`
+									ON `movie_writer`.`writer_id` = `writer`.`writer_id`
+									WHERE `movie_writer`.`movie_id`={$id}" );
+
+				//this nested loop is for the subscription query
+				while ( $writerRow = mysqli_fetch_array( $movieWriterResult ) ) {
+
+					//check if the address matches between the two
+					//(could check title, however rss_id would be ambiguous
+					//as it appears in two tables)
+					/*$firstTableAddress = $rssRow['rss_url'];
+					$secondTableAddress = $subRow['rss_url'];
+
+					if($firstTableAddress==$secondTableAddress) {
+						$matchFlag = true;
+					}*/
+					?>
+				<div class="movieperson">
+
+					<h1 class="starhead">Writers</h1>
+
+					<h3 class="starname">
+						<?php echo $writerRow['writer_fname']; ?>&nbsp;
+						<?php echo $writerRow['writer_sname']; ?>&nbsp;&nbsp;&nbsp;
+						<img src="<?php echo $writerRow['writer_img'];?>"
+						 style="width: 80px; border-radius: 25px;">
+					</h3>
+
+
+				</div>
+				<?php }
+				?>
+
+</div>
 		</div>
-		<!--ACTORS-->
-		<?php
-		//get all RSS feeds
-
-		$actorResult = mysqli_query( $con,
-			"SELECT *
-								FROM `actor`" );
 
 
 
-		//flag to see if match with user (if they are subscribed)
-		$matchFlag = false;
-
-
-
-
-		//get user linked subscriptions
-		$movieActorResult = mysqli_query( $con,
-			"SELECT *
-							FROM `actor`
-							INNER JOIN `movie_actor`
-							ON `movie_actor`.`actor_id` = `actor`.`actor_id`
-							WHERE `movie_actor`.`movie_id`={$id}" );
-
-		//this nested loop is for the subscription query
-		while ( $subRow = mysqli_fetch_array( $movieActorResult ) ) {
-
-			//check if the address matches between the two
-			//(could check title, however rss_id would be ambiguous
-			//as it appears in two tables)
-			/*$firstTableAddress = $rssRow['rss_url'];
-			$secondTableAddress = $subRow['rss_url'];
-
-			if($firstTableAddress==$secondTableAddress) {
-				$matchFlag = true;
-			}*/
-			?>
-		<div>
-
-			<h1>Actors</h1>
-
-			<h2>
-				<?php echo $subRow['actor_fname']; ?>&nbsp;
-				<?php echo $subRow['actor_sname']; ?>
-			</h2>
-			<img src="<?php echo $subRow['actor_img'];?>">
-
-		</div>
-		<?php }
-		?>
-
-
-		<?php
-		//get all from actor
-
-		$directorResult = mysqli_query( $con,
-			"SELECT *
-								FROM `director`" );
-
-
-
-		//flag to see if match with user (if they are subscribed)
-		$matchFlag = false;
-
-
-
-
-		//get user linked subscriptions
-		$movieDirectorResult = mysqli_query( $con,
-			"SELECT *
-							FROM `director`
-							INNER JOIN `movie_director`
-							ON `movie_director`.`director_id` = `director`.`director_id`
-							WHERE `movie_director`.`movie_id`={$id}" );
-
-		//this nested loop is for the subscription query
-		while ( $directorRow = mysqli_fetch_array( $movieDirectorResult ) ) {
-
-			//check if the address matches between the two
-			//(could check title, however rss_id would be ambiguous
-			//as it appears in two tables)
-			/*$firstTableAddress = $rssRow['rss_url'];
-			$secondTableAddress = $subRow['rss_url'];
-
-			if($firstTableAddress==$secondTableAddress) {
-				$matchFlag = true;
-			}*/
-			?>
-		<div>
-
-			<h1>Directors</h1>
-
-			<h2>
-				<?php echo $directorRow['director_fname']; ?>&nbsp;
-				<?php echo $directorRow['director_sname']; ?>
-			</h2>
-			<img src="<?php echo $directorRow['director_image'];?>">
-
-		</div>
-		<?php }
-		?>
-
-		<!--Writers-->
-
-		<?php
-		//get all from actor
-
-		$writerResult = mysqli_query( $con,
-			"SELECT *
-								FROM `writer`" );
-
-
-
-		//flag to see if match with user (if they are subscribed)
-		$matchFlag = false;
-
-
-
-
-		//get user linked subscriptions
-		$movieWriterResult = mysqli_query( $con,
-			"SELECT *
-							FROM `writer`
-							INNER JOIN `movie_writer`
-							ON `movie_writer`.`writer_id` = `writer`.`writer_id`
-							WHERE `movie_writer`.`movie_id`={$id}" );
-
-		//this nested loop is for the subscription query
-		while ( $writerRow = mysqli_fetch_array( $movieWriterResult ) ) {
-
-			//check if the address matches between the two
-			//(could check title, however rss_id would be ambiguous
-			//as it appears in two tables)
-			/*$firstTableAddress = $rssRow['rss_url'];
-			$secondTableAddress = $subRow['rss_url'];
-
-			if($firstTableAddress==$secondTableAddress) {
-				$matchFlag = true;
-			}*/
-			?>
-		<div>
-
-			<h1>Writers</h1>
-
-			<h2>
-				<?php echo $writerRow['writer_fname']; ?>&nbsp;
-				<?php echo $writerRow['writer_sname']; ?>
-			</h2>
-			<img src="<?php echo $writerRow['writer_img'];?>">
-
-		</div>
-		<?php }
-		?>
-		
-		
-		
 
 
 
