@@ -27,7 +27,7 @@ include( "inc/header.php" );
 
 	<!-- Bootstrap -->
 
-	<link href="css/bootstrap.css" rel="stylesheet">
+
 
 	<link href="css/style.css" rel="stylesheet">
 

@@ -15,7 +15,7 @@ include('inc/form_handlers/login_handler.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Welcome to WebFlix</title>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
 	<link rel="stylesheet" type="text/css" href="css/webflix.css">
 		<link rel="stylesheet" href="assets/css/register.css">
 	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>

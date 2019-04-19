@@ -76,7 +76,8 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 	</h2>
 <hr/>
 	<p>
-		<?php echo $row['movie_description']; ?>
+	    //shorten characters in description
+        <?php echo mb_strimwidth($row['movie_description'], 0, 100, "....more info"); ?>
 	</p>
 	<hr/>
 	<p>Genre:
