@@ -143,9 +143,9 @@ while ( $row = mysqli_fetch_array( $result ) ) {
 	<div class="container-fluid splash-left2">
 
 		<?php include 'inc/nav.php' ?>
-		<div class="row">
+		<div class="row" style="margin-top: 4em;">
 			<div class="col-md-1"></div>
-			<div class="col-md-3 text-center proftile">
+			<div class="col-md-3 text-center proftile" style="margin-right: 1em">
 			<h2 id="welcome" class="" data-wow-duration="2s" data-wow-delay="0.9s" style="margin-top: 1em;">
 				<span class="" data-wow-duration="2s" data-wow-delay="1.2s" id="webflix1">
 				<strong style="padding: 3%;">	<?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></strong>
@@ -155,11 +155,12 @@ while ( $row = mysqli_fetch_array( $result ) ) {
 
 
 
-	<img style="border-radius: 25px; opacity: 0.7; width: 60%;" src="<?php echo $row['profile_pic']?>">
+	<img style="border-radius: 25px; opacity: 0.9; width: 40%;" src="<?php echo $row['profile_pic']?>">
 	<br/>
 	<br/>
 	<h5 class="membsince" style="color: #d5d6d2;">	Member Since: <?php echo "<td>" . date("d/m/Y", strtotime($row['signup_date'])) . "</td>"; ?> </h5>
   <hr/>
+  <a href="rss.php">Add & View Your Personal Feeds</a>
   <p class="splash-msg" style="font-size: 25px;">Manage your subscriptions & access full feeds with comments below</p>
   <div id="messages">
 
@@ -174,7 +175,7 @@ while ( $row = mysqli_fetch_array( $result ) ) {
 <div class="col-md-7 profSubs">
 	<h2 class="profRssTitle">Your RSS Feed Subscriptions</h2>
 	<br/>
-	<div class="row">
+	<div class="row" style="margin-top: 2em;">
 		<?php
 		//set user logged as session variable
 		$userId = $_SESSION[ 'user_id' ];
@@ -264,6 +265,7 @@ rssfeed_cache = "<?php echo $subRow['rss_feed_cache']; ?>";
 	</div>
 
 </div>
+<?php include 'inc/footer.php' ?>
 </div>
 
 

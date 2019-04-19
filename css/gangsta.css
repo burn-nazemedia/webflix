@@ -47,6 +47,94 @@ height: 100%;
 .page-content {
   background-color: #353c3f;
 }
+.proftile {
+  background-color:  black;
+  border-radius: 25px;
+  opacity: 0.7;
+  border: 1px solid #331f00;
+
+}
+.profSubs {
+    background-color:  black;
+    height: auto;
+    border-radius: 25px;
+    padding: 1.5%;
+    opacity: 0.7;
+    border: 2px solid #331f00;
+}
+.profRssTitle {
+  color: white !important;
+  font-weight: 600;
+}
+.rsstitle {
+
+  padding: 1%;
+  margin-bottom: 1em;
+  border-radius: 25px;
+  color: white !important;
+
+}
+.rsslink {
+  color: gold;
+  font-size: 20px;
+  font-weight: bold;
+}
+#rssnames {
+  color: gold !important;
+  font-weight: bold;
+}
+#rssnames2 {
+  color: gold !important;
+  font-weight: bold;
+}
+#rsstitle {
+  background-color: white !important;
+}
+.profRssName {
+  color: white;
+  font-weight: 500;
+}
+#subcontent {
+  background-color: black;
+  border-radius: 25px;
+  border: 2px solid #331f00;
+  padding: %;
+}
+.sublink {
+  background-color: #494949;
+  color: white !important;
+  padding: 2% !important;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.rss_tile {
+  background-color: black !important;
+  opacity: 0.8;
+}
+#subscribed {
+  color: white;
+  background-color: green;
+  border-radius: 25px;
+  padding: 2%;
+  font-weight: bold;
+}
+#notsubscribed {
+  color: white;
+  background-color: red;
+  border-radius: 25px;
+  padding: 2%;
+  font-weight: bold;
+}
+#feed {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+.listingname {
+  color: #d5d6d2;
+}
 /*index*/
 .splash-left {
   width: 100%;
@@ -105,7 +193,7 @@ opacity: 0.1;
   z-index: -2;
 }
 .splash-left2::after {
-  background-image: url('../images/Happy-Gilmore.jpg');
+  background-image: url('../images/ny1.jpg');
  background-size: cover;
 content: "";
 display: block;
@@ -115,7 +203,7 @@ left: 0px;
 width: 100%;
 height: 100%;
 z-index: -1;
-opacity: 0.1;
+opacity: 0.3;
 }
 /*profile*/
 .splash-left3 {
@@ -215,6 +303,29 @@ h2, h1, h3, h4, h5 {
 
   transition: 0.7s;
 }
+.movdet {
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 25px;
+  border: 2px solid #331f00;
+  padding: 2%;
+  text-align: justify;
+}
+.starhead {
+  color: white;
+}
+.starname {
+  color: #d5d6d2;
+}
+.splash-msg1 {
+  color: white !important;
+}
+.genre {
+  color: white !important;
+}
+.movieperson {
+  margin-bottom: 2em;
+}
 .homeSearch {
     width: 40% !important;
     opacity: 0.5;
@@ -259,7 +370,7 @@ h2, h1, h3, h4, h5 {
 }
 #acdets {
   display: none;
-  background-color: #a0daff;
+  background-color: black;
   border-radius: 25px;
   margin-bottom: 2em;
     padding: 2%;
@@ -300,7 +411,7 @@ h2, h1, h3, h4, h5 {
   transition: 0.7s;
 }
 .setform {
-  color: hotpink;
+  color: white;
   font-size: 25px;
   font-weight: bold;
 }
@@ -418,7 +529,7 @@ h2, h1, h3, h4, h5 {
 }
 
 .splash-msg {
-font-family: 'Fredericka the Great';
+
 color: white;
 font-weight: 500;
 font-size: 45px;

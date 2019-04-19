@@ -263,4 +263,5 @@ i {
 </div>
 	<br>
 <br>
+<?php include 'inc/footer.php' ?>
 </div>
