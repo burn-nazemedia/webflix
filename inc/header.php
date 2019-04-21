@@ -66,6 +66,16 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 
 <script type="text/javascript" src="assets/js/functions.js"></script>
 
+<script>
+  //check whether the browser supports service worker
+  if('serviceWorker' in navigator) {
+    //if so, register our service worker
+    navigator.serviceWorker.register('sw.js')
+      //then log a note that this worked for debugging purposes
+      .then(function() { console.log("Service Worker Registered"); });
+  }
+</script>
+
 	<title>Welcome to Webflix </title>
 </head>
 

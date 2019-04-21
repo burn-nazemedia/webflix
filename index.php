@@ -5,8 +5,6 @@ include( 'inc/header.php' );
 $id = $_GET[ 'user_id' ];
 
 
-
-
 //if user is not logged in return to register.php
 if ( isset( $_SESSION[ 'username' ] ) ) {
 	$userLoggedIn = $_SESSION[ 'username' ];
@@ -19,13 +17,7 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 
 }
 
-
-
 ?>
-
-
-
-
 
 	<body class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
   <div class="container-fluid splash-left4">
@@ -95,4 +87,14 @@ if ( isset( $_SESSION[ 'username' ] ) ) {
 </div>
 <?php include 'inc/footer.php' ?>
 </div>
+
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
+</script>
+
+<script src="offline/register-sw.js" type="text/javascript"> </script>
 </body>

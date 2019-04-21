@@ -4,7 +4,7 @@ session_start();
 
 $timezone = date_default_timezone_set("Europe/London");
 
-$con = mysqli_connect("localhost", "dan", "10202602TheMos", "WebFlix"); // connection variable
+$con = mysqli_connect("localhost", "nic", "T102026?m", "WebFlix");
 
 if(mysqli_connect_errno())
 {
